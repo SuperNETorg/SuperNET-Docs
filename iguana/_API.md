@@ -10,9 +10,13 @@ need to create help/SuperNET.md file
 Set the coin  to use for bitcoin RPC calls. this will suffice in single coin environments. That is bitcoinrpc API just sets the coin to use for the bitcoin RPC api
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"bitcoinrpc\",\"setcoin\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/bitcoinrpc?setcoin={string}
@@ -31,9 +35,13 @@ need to create help/ramchain.md file
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"verifytx\",\"txid\":\"{hash}\",\"txbytes\":\"{str}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/verifytx?txid={hash}&txbytes={str}
@@ -49,9 +57,13 @@ txbytes | str | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"getblockhash\",\"height\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/getblockhash?height={int}
@@ -66,9 +78,13 @@ height | int | no help info
 Returns information about the block with the given hash
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"getblock\",\"blockhash\":\"{hash}\",\"remoteonly\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/getblock?blockhash={hash}&remoteonly={int}
@@ -84,9 +100,13 @@ remoteonly | int | no help info
 Returns an object about the given transaction containing
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"getrawtransaction\",\"txid\":\"{hash}\",\"verbose\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/getrawtransaction?txid={hash}&verbose={int}
@@ -102,9 +122,13 @@ verbose | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"gettransaction\",\"txid\":\"{hash}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/gettransaction?txid={hash}
@@ -119,9 +143,13 @@ txid | hash | no help info
 Produces a human-readable JSON object for a raw transaction
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"decoderawtransaction\",\"rawtx\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/decoderawtransaction?rawtx={string}
@@ -140,9 +168,13 @@ need to create help/SuperNET.md file
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"login\",\"handle\":\"{string}\",\"password\":\"{string}\",\"permanentfile\":\"{string}\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/login?handle={string}&password={string}&permanentfile={string}&passphrase={string}
@@ -160,9 +192,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"logout\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/logout
@@ -176,9 +212,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"activehandle\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/activehandle
@@ -192,9 +232,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"encryptjson\",\"password\":\"{string}\",\"permanentfile\":\"{string}\",\"anything\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/encryptjson?password={string}&permanentfile={string}&anything={string}
@@ -211,9 +255,13 @@ anything | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"decryptjson\",\"password\":\"{string}\",\"permanentfile\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/decryptjson?password={string}&permanentfile={string}
@@ -233,9 +281,13 @@ need to create help/InstantDEX.md file
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"orderbook\",\"exchange\":\"{string}\",\"base\":\"{string}\",\"rel\":\"{string}\",\"depth\":\"{int}\",\"allfields\":\"{int}\",\"ignore\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/orderbook?exchange={string}&base={string}&rel={string}&depth={int}&allfields={int}&ignore={int}
@@ -255,9 +307,13 @@ ignore | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"buy\",\"exchange\":\"{string}\",\"base\":\"{string}\",\"rel\":\"{string}\",\"price\":\"{float}\",\"volume\":\"{float}\",\"dotrade\":\"{float}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/buy?exchange={string}&base={string}&rel={string}&price={float}&volume={float}&dotrade={float}
@@ -277,9 +333,13 @@ dotrade | float | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"sell\",\"exchange\":\"{string}\",\"base\":\"{string}\",\"rel\":\"{string}\",\"price\":\"{float}\",\"volume\":\"{float}\",\"dotrade\":\"{float}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/sell?exchange={string}&base={string}&rel={string}&price={float}&volume={float}&dotrade={float}
@@ -299,9 +359,13 @@ dotrade | float | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"withdraw\",\"exchange\":\"{string}\",\"base\":\"{string}\",\"destaddr\":\"{string}\",\"amount\":\"{float}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/withdraw?exchange={string}&base={string}&destaddr={string}&amount={float}
@@ -319,9 +383,13 @@ amount | float | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"apikeypair\",\"exchange\":\"{string}\",\"apikey\":\"{string}\",\"apisecret\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/apikeypair?exchange={string}&apikey={string}&apisecret={string}
@@ -338,9 +406,13 @@ apisecret | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"setuserid\",\"exchange\":\"{string}\",\"userid\":\"{string}\",\"tradepassword\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/setuserid?exchange={string}&userid={string}&tradepassword={string}
@@ -357,9 +429,13 @@ tradepassword | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"supports\",\"exchange\":\"{string}\",\"base\":\"{string}\",\"rel\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/supports?exchange={string}&base={string}&rel={string}
@@ -376,9 +452,13 @@ rel | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"balance\",\"exchange\":\"{string}\",\"base\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/balance?exchange={string}&base={string}
@@ -394,9 +474,13 @@ base | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"orderstatus\",\"exchange\":\"{string}\",\"orderid\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/orderstatus?exchange={string}&orderid={string}
@@ -412,9 +496,13 @@ orderid | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"cancelorder\",\"exchange\":\"{string}\",\"orderid\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/cancelorder?exchange={string}&orderid={string}
@@ -430,9 +518,13 @@ orderid | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"openorders\",\"exchange\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/openorders?exchange={string}
@@ -447,9 +539,13 @@ exchange | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"tradehistory\",\"exchange\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/tradehistory?exchange={string}
@@ -464,9 +560,13 @@ exchange | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"pollgap\",\"exchange\":\"{string}\",\"pollgap\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/pollgap?exchange={string}&pollgap={int}
@@ -482,9 +582,13 @@ pollgap | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"allexchanges\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/allexchanges
@@ -498,9 +602,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"allpairs\",\"exchange\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/allpairs?exchange={string}
@@ -515,9 +623,13 @@ exchange | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"request\",\"reference\":\"{string}\",\"base\":\"{string}\",\"rel\":\"{string}\",\"volume\":\"{float}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/request?reference={string}&base={string}&rel={string}&volume={float}
@@ -535,9 +647,13 @@ volume | float | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"proposal\",\"reference\":\"{string}\",\"message\":\"{string}\",\"basetxid\":\"{hash}\",\"reltxid\":\"{hash}\",\"duration\":\"{int}\",\"flags\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/proposal?reference={string}&message={string}&basetxid={hash}&reltxid={hash}&duration={int}&flags={int}
@@ -557,9 +673,13 @@ flags | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"accept\",\"reference\":\"{string}\",\"message\":\"{string}\",\"basetxid\":\"{hash}\",\"reltxid\":\"{hash}\",\"duration\":\"{int}\",\"flags\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/accept?reference={string}&message={string}&basetxid={hash}&reltxid={hash}&duration={int}&flags={int}
@@ -579,9 +699,13 @@ flags | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"confirm\",\"reference\":\"{string}\",\"message\":\"{string}\",\"basetxid\":\"{hash}\",\"reltxid\":\"{hash}\",\"baseheight\":\"{int}\",\"relheight\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/InstantDEX/confirm?reference={string}&message={string}&basetxid={hash}&reltxid={hash}&baseheight={int}&relheight={int}
@@ -605,9 +729,13 @@ need to create help/tradebot.md file
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"monitor\",\"exchange\":\"{string}\",\"base\":\"{string}\",\"rel\":\"{string}\",\"commission\":\"{float}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/tradebot/monitor?exchange={string}&base={string}&rel={string}&commission={float}
@@ -625,9 +753,13 @@ commission | float | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"monitorall\",\"exchange\":\"{string}\",\"commission\":\"{float}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/tradebot/monitorall?exchange={string}&commission={float}
@@ -643,9 +775,13 @@ commission | float | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"unmonitor\",\"exchange\":\"{string}\",\"base\":\"{string}\",\"rel\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/tradebot/unmonitor?exchange={string}&base={string}&rel={string}
@@ -662,9 +798,13 @@ rel | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"accumulate\",\"exchange\":\"{string}\",\"base\":\"{string}\",\"rel\":\"{string}\",\"price\":\"{float}\",\"volume\":\"{float}\",\"duration\":\"{float}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/tradebot/accumulate?exchange={string}&base={string}&rel={string}&price={float}&volume={float}&duration={float}
@@ -684,9 +824,13 @@ duration | float | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"divest\",\"exchange\":\"{string}\",\"base\":\"{string}\",\"rel\":\"{string}\",\"price\":\"{float}\",\"volume\":\"{float}\",\"duration\":\"{float}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/tradebot/divest?exchange={string}&base={string}&rel={string}&price={float}&volume={float}&duration={float}
@@ -706,9 +850,13 @@ duration | float | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"activebots\",\"exchange\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/tradebot/activebots?exchange={string}
@@ -723,9 +871,13 @@ exchange | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"status\",\"exchange\":\"{string}\",\"botid\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/tradebot/status?exchange={string}&botid={string}
@@ -741,9 +893,13 @@ botid | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"pause\",\"exchange\":\"{string}\",\"botid\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/tradebot/pause?exchange={string}&botid={string}
@@ -759,9 +915,13 @@ botid | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"stop\",\"exchange\":\"{string}\",\"botid\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/tradebot/stop?exchange={string}&botid={string}
@@ -777,9 +937,13 @@ botid | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"resume\",\"exchange\":\"{string}\",\"botid\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/tradebot/resume?exchange={string}&botid={string}
@@ -799,9 +963,13 @@ need to create help/pangea.md file
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pangea\",\"method\":\"call\",\"tablehash\":\"{hash}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/pangea/call?tablehash={hash}
@@ -816,9 +984,13 @@ tablehash | hash | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pangea\",\"method\":\"raise\",\"tablehash\":\"{hash}\",\"numchips\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/pangea/raise?tablehash={hash}&numchips={int}
@@ -834,9 +1006,13 @@ numchips | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pangea\",\"method\":\"bet\",\"tablehash\":\"{hash}\",\"numchips\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/pangea/bet?tablehash={hash}&numchips={int}
@@ -852,9 +1028,13 @@ numchips | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pangea\",\"method\":\"check\",\"tablehash\":\"{hash}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/pangea/check?tablehash={hash}
@@ -869,9 +1049,13 @@ tablehash | hash | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pangea\",\"method\":\"fold\",\"tablehash\":\"{hash}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/pangea/fold?tablehash={hash}
@@ -886,9 +1070,13 @@ tablehash | hash | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pangea\",\"method\":\"allin\",\"tablehash\":\"{hash}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/pangea/allin?tablehash={hash}
@@ -903,9 +1091,13 @@ tablehash | hash | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pangea\",\"method\":\"status\",\"tablehash\":\"{hash}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/pangea/status?tablehash={hash}
@@ -920,9 +1112,13 @@ tablehash | hash | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pangea\",\"method\":\"mode\",\"tablehash\":\"{hash}\",\"params\":\"{str}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/pangea/mode?tablehash={hash}&params={str}
@@ -938,9 +1134,13 @@ params | str | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pangea\",\"method\":\"history\",\"tablehash\":\"{hash}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/pangea/history?tablehash={hash}
@@ -955,9 +1155,13 @@ tablehash | hash | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pangea\",\"method\":\"handhistory\",\"tablehash\":\"{hash}\",\"hand\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/pangea/handhistory?tablehash={hash}&hand={int}
@@ -973,9 +1177,13 @@ hand | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pangea\",\"method\":\"host\",\"minplayers\":\"{int}\",\"params\":\"{array}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/pangea/host?minplayers={int}&params={array}
@@ -991,9 +1199,13 @@ params | array | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pangea\",\"method\":\"lobby\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/pangea/lobby
@@ -1007,9 +1219,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pangea\",\"method\":\"join\",\"tablehash\":\"{hash}\",\"handle\":\"{str}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/pangea/join?tablehash={hash}&handle={str}
@@ -1025,9 +1241,13 @@ handle | str | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pangea\",\"method\":\"buyin\",\"tablehash\":\"{hash}\",\"numchips\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/pangea/buyin?tablehash={hash}&numchips={int}
@@ -1043,9 +1263,13 @@ numchips | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pangea\",\"method\":\"start\",\"tablehash\":\"{hash}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/pangea/start?tablehash={hash}
@@ -1064,9 +1288,13 @@ need to create help/SuperNET.md file
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"help\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/help
@@ -1080,9 +1308,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"utime2utc\",\"utime\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/utime2utc?utime={string}
@@ -1097,9 +1329,13 @@ utime | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"utc2utime\",\"utc\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/utc2utime?utc={int}
@@ -1114,9 +1350,13 @@ utc | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"html\",\"agentform\":\"{string}\",\"htmlfile\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/html?agentform={string}&htmlfile={string}
@@ -1132,9 +1372,13 @@ htmlfile | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"DHT\",\"hexmsg\":\"{string}\",\"destip\":\"{string}\",\"categoryhash\":\"{hash}\",\"subhash\":\"{hash}\",\"maxdelay\":\"{int}\",\"broadcast\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/DHT?hexmsg={string}&destip={string}&categoryhash={hash}&subhash={hash}&maxdelay={int}&broadcast={int}
@@ -1154,9 +1398,13 @@ broadcast | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"rosetta\",\"passphrase\":\"{string}\",\"pin\":\"{string}\",\"showprivkey\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/rosetta?passphrase={string}&pin={string}&showprivkey={string}
@@ -1173,9 +1421,13 @@ showprivkey | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"keypair\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/keypair
@@ -1189,9 +1441,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"priv2pub\",\"privkey\":\"{hash}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/priv2pub?privkey={hash}
@@ -1206,9 +1462,13 @@ privkey | hash | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"wif2priv\",\"wif\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/wif2priv?wif={string}
@@ -1223,9 +1483,13 @@ wif | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"cipher\",\"privkey\":\"{hash}\",\"destpubkey\":\"{hash}\",\"message\":\"{str}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/cipher?privkey={hash}&destpubkey={hash}&message={str}
@@ -1242,9 +1506,13 @@ message | str | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"decipher\",\"privkey\":\"{hash}\",\"srcpubkey\":\"{hash}\",\"cipherstr\":\"{str}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/decipher?privkey={hash}&srcpubkey={hash}&cipherstr={str}
@@ -1261,9 +1529,13 @@ cipherstr | str | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"broadcastcipher\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/broadcastcipher?message={string}
@@ -1278,9 +1550,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"broadcastdecipher\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/broadcastdecipher?message={string}
@@ -1295,9 +1571,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"multicastcipher\",\"pubkey\":\"{hash}\",\"message\":\"{str}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/multicastcipher?pubkey={hash}&message={str}
@@ -1313,9 +1593,13 @@ message | str | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"multicastdecipher\",\"privkey\":\"{hash}\",\"cipherstr\":\"{str}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/multicastdecipher?privkey={hash}&cipherstr={str}
@@ -1331,9 +1615,13 @@ cipherstr | str | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"subscribe\",\"category\":\"{string}\",\"subcategory\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/subscribe?category={string}&subcategory={string}
@@ -1349,9 +1637,13 @@ subcategory | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"gethexmsg\",\"category\":\"{string}\",\"subcategory\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/gethexmsg?category={string}&subcategory={string}
@@ -1367,9 +1659,13 @@ subcategory | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"posthexmsg\",\"category\":\"{string}\",\"subcategory\":\"{string}\",\"hexmsg\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/posthexmsg?category={string}&subcategory={string}&hexmsg={string}
@@ -1386,9 +1682,13 @@ hexmsg | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"announce\",\"category\":\"{string}\",\"subcategory\":\"{string}\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/announce?category={string}&subcategory={string}&message={string}
@@ -1405,9 +1705,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"survey\",\"category\":\"{string}\",\"subcategory\":\"{string}\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/survey?category={string}&subcategory={string}&message={string}
@@ -1424,9 +1728,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"categoryhashes\",\"category\":\"{string}\",\"subcategory\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/categoryhashes?category={string}&subcategory={string}
@@ -1446,9 +1754,13 @@ need to create help/mouse.md file
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"mouse\",\"method\":\"image\",\"name\":\"{string}\",\"x\":\"{int}\",\"y\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/mouse/image?name={string}&x={int}&y={int}
@@ -1465,9 +1777,13 @@ y | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"mouse\",\"method\":\"change\",\"name\":\"{string}\",\"x\":\"{int}\",\"y\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/mouse/change?name={string}&x={int}&y={int}
@@ -1484,9 +1800,13 @@ y | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"mouse\",\"method\":\"click\",\"name\":\"{string}\",\"x\":\"{int}\",\"y\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/mouse/click?name={string}&x={int}&y={int}
@@ -1503,9 +1823,13 @@ y | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"mouse\",\"method\":\"close\",\"name\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/mouse/close?name={string}
@@ -1520,9 +1844,13 @@ name | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"mouse\",\"method\":\"leave\",\"name\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/mouse/leave?name={string}
@@ -1541,9 +1869,13 @@ need to create help/keyboard.md file
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"keyboard\",\"method\":\"key\",\"name\":\"{string}\",\"c\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/keyboard/key?name={string}&c={int}
@@ -1563,9 +1895,13 @@ need to create help/SuperNET.md file
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"getpeers\",\"activecoin\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/getpeers?activecoin={string}
@@ -1580,9 +1916,13 @@ activecoin | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"mypeers\",\"supernet\":\"{array}\",\"rawpeers\":\"{array}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/mypeers?supernet={array}&rawpeers={array}
@@ -1598,9 +1938,13 @@ rawpeers | array | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"stop\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/stop
@@ -1614,9 +1958,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"saveconf\",\"wallethash\":\"{hash}\",\"confjsonstr\":\"{str}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/saveconf?wallethash={hash}&confjsonstr={str}
@@ -1632,9 +1980,13 @@ confjsonstr | str | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"layer\",\"mypriv\":\"{hash}\",\"otherpubs\":\"{array}\",\"str\":\"{str}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/SuperNET/layer?mypriv={hash}&otherpubs={array}&str={str}
@@ -1655,9 +2007,13 @@ need to create help/iguana.md file
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"peers\",\"activecoin\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/iguana/peers?activecoin={string}
@@ -1672,9 +2028,13 @@ activecoin | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"maxpeers\",\"activecoin\":\"{string}\",\"max\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/iguana/maxpeers?activecoin={string}&max={int}
@@ -1690,9 +2050,13 @@ max | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"getconnectioncount\",\"activecoin\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/iguana/getconnectioncount?activecoin={string}
@@ -1707,9 +2071,13 @@ activecoin | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addcoin\",\"newcoin\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/iguana/addcoin?newcoin={string}
@@ -1724,9 +2092,13 @@ newcoin | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"startcoin\",\"activecoin\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/iguana/startcoin?activecoin={string}
@@ -1741,9 +2113,13 @@ activecoin | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"pausecoin\",\"activecoin\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/iguana/pausecoin?activecoin={string}
@@ -1758,9 +2134,13 @@ activecoin | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"addnode\",\"activecoin\":\"{string}\",\"ipaddr\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/iguana/addnode?activecoin={string}&ipaddr={string}
@@ -1776,9 +2156,13 @@ ipaddr | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"persistent\",\"activecoin\":\"{string}\",\"ipaddr\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/iguana/persistent?activecoin={string}&ipaddr={string}
@@ -1794,9 +2178,13 @@ ipaddr | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"removenode\",\"activecoin\":\"{string}\",\"ipaddr\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/iguana/removenode?activecoin={string}&ipaddr={string}
@@ -1812,9 +2200,13 @@ ipaddr | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"oneshot\",\"activecoin\":\"{string}\",\"ipaddr\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/iguana/oneshot?activecoin={string}&ipaddr={string}
@@ -1830,9 +2222,13 @@ ipaddr | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"iguana\",\"method\":\"nodestatus\",\"activecoin\":\"{string}\",\"ipaddr\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/iguana/nodestatus?activecoin={string}&ipaddr={string}
@@ -1852,9 +2248,13 @@ need to create help/ramchain.md file
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"getinfo\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/getinfo
@@ -1868,9 +2268,13 @@ field | value type | Description
 Returns raw transaction representation for given transaction id
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"getbestblockhash\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/getbestblockhash
@@ -1884,9 +2288,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"getblockcount\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/getblockcount
@@ -1900,9 +2308,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"listaddressgroupings\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/listaddressgroupings
@@ -1916,9 +2328,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"walletlock\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/walletlock
@@ -1932,9 +2348,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"checkwallet\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/checkwallet
@@ -1948,9 +2368,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"repairwallet\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/repairwallet
@@ -1964,9 +2388,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"makekeypair\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/makekeypair
@@ -1980,9 +2408,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"gettxoutsetinfo\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/gettxoutsetinfo
@@ -1996,9 +2428,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"listlockunspent\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/listlockunspent
@@ -2012,9 +2448,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"getrawchangeaddress\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/getrawchangeaddress
@@ -2028,9 +2468,13 @@ field | value type | Description
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"listaccounts\",\"minconf\":\"{int}\",\"includewatchonly\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/listaccounts?minconf={int}&includewatchonly={int}
@@ -2046,9 +2490,13 @@ includewatchonly | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"listreceivedbyaddress\",\"minconf\":\"{int}\",\"includeempty\":\"{int}\",\"flag\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/listreceivedbyaddress?minconf={int}&includeempty={int}&flag={int}
@@ -2065,9 +2513,13 @@ flag | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"listunspent\",\"minconf\":\"{int}\",\"maxconf\":\"{int}\",\"array\":\"{array}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/listunspent?minconf={int}&maxconf={int}&array={array}
@@ -2084,9 +2536,13 @@ array | array | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"dumpwallet\",\"filename\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/dumpwallet?filename={string}
@@ -2101,9 +2557,13 @@ filename | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"backupwallet\",\"filename\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/backupwallet?filename={string}
@@ -2118,9 +2578,13 @@ filename | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"encryptwallet\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/encryptwallet?passphrase={string}
@@ -2135,9 +2599,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"validatepubkey\",\"pubkey\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/validatepubkey?pubkey={string}
@@ -2152,9 +2620,13 @@ pubkey | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"getnewaddress\",\"account\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/getnewaddress?account={string}
@@ -2169,9 +2641,13 @@ account | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"vanitygen\",\"vanity\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/vanitygen?vanity={string}
@@ -2186,9 +2662,13 @@ vanity | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"getaddressesbyaccount\",\"account\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/getaddressesbyaccount?account={string}
@@ -2203,9 +2683,13 @@ account | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"getaccount\",\"address\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/getaccount?address={string}
@@ -2220,9 +2704,13 @@ address | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"getaccountaddress\",\"account\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/getaccountaddress?account={string}
@@ -2237,9 +2725,13 @@ account | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"dumpprivkey\",\"address\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/dumpprivkey?address={string}
@@ -2254,9 +2746,13 @@ address | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"importwallet\",\"filename\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/importwallet?filename={string}
@@ -2271,9 +2767,13 @@ filename | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"decodescript\",\"script\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/decodescript?script={string}
@@ -2288,9 +2788,13 @@ script | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"setaccount\",\"address\":\"{string}\",\"account\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/setaccount?address={string}&account={string}
@@ -2306,9 +2810,13 @@ account | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"walletpassphrasechange\",\"oldpassphrase\":\"{string}\",\"newpassphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/walletpassphrasechange?oldpassphrase={string}&newpassphrase={string}
@@ -2324,9 +2832,13 @@ newpassphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"signmessage\",\"address\":\"{string}\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/signmessage?address={string}&message={string}
@@ -2342,9 +2854,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"verifymessage\",\"address\":\"{string}\",\"sig\":\"{string}\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/verifymessage?address={string}&sig={string}&message={string}
@@ -2361,9 +2877,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"listreceivedbyaccount\",\"confirmations\":\"{int}\",\"includeempty\":\"{int}\",\"watchonly\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/listreceivedbyaccount?confirmations={int}&includeempty={int}&watchonly={int}
@@ -2380,9 +2900,13 @@ watchonly | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"getbalance\",\"confirmations\":\"{int}\",\"includeempty\":\"{int}\",\"watchonly\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/getbalance?confirmations={int}&includeempty={int}&watchonly={int}
@@ -2399,9 +2923,13 @@ watchonly | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"importprivkey\",\"wif\":\"{string}\",\"account\":\"{string}\",\"rescan\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/importprivkey?wif={string}&account={string}&rescan={int}
@@ -2418,9 +2946,13 @@ rescan | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"getreceivedbyaccount\",\"account\":\"{string}\",\"includeempty\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/getreceivedbyaccount?account={string}&includeempty={int}
@@ -2436,9 +2968,13 @@ includeempty | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"walletpassphrase\",\"passphrase\":\"{string}\",\"timeout\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/walletpassphrase?passphrase={string}&timeout={int}
@@ -2454,9 +2990,13 @@ timeout | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"getreceivedbyaddress\",\"address\":\"{string}\",\"minconf\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/getreceivedbyaddress?address={string}&minconf={int}
@@ -2472,9 +3012,13 @@ minconf | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"sendrawtransaction\",\"rawtx\":\"{string}\",\"allowhighfees\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/sendrawtransaction?rawtx={string}&allowhighfees={int}
@@ -2490,9 +3034,13 @@ allowhighfees | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"listsinceblock\",\"blockhash\":\"{hash}\",\"target\":\"{int}\",\"flag\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/listsinceblock?blockhash={hash}&target={int}&flag={int}
@@ -2509,9 +3057,13 @@ flag | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"listtransactions\",\"account\":\"{string}\",\"count\":\"{int}\",\"skip\":\"{int}\",\"includewatchonly\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/listtransactions?account={string}&count={int}&skip={int}&includewatchonly={int}
@@ -2529,9 +3081,13 @@ includewatchonly | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"gettxout\",\"txid\":\"{hash}\",\"vout\":\"{int}\",\"mempool\":\"{int}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/gettxout?txid={hash}&vout={int}&mempool={int}
@@ -2548,9 +3104,13 @@ mempool | int | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"settxfee\",\"amount\":\"{float}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/settxfee?amount={float}
@@ -2565,9 +3125,13 @@ amount | float | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"lockunspent\",\"flag\":\"{int}\",\"array\":\"{array}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/lockunspent?flag={int}&array={array}
@@ -2583,9 +3147,13 @@ array | array | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"createmultisig\",\"M\":\"{int}\",\"array\":\"{array}\",\"account\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/createmultisig?M={int}&array={array}&account={string}
@@ -2602,9 +3170,13 @@ account | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"createrawtransaction\",\"vins\":\"{array}\",\"vouts\":\"{array}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/createrawtransaction?vins={array}&vouts={array}
@@ -2620,9 +3192,13 @@ vouts | array | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"signrawtransaction\",\"rawtx\":\"{string}\",\"vins\":\"{array}\",\"privkeys\":\"{array}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/signrawtransaction?rawtx={string}&vins={array}&privkeys={array}
@@ -2639,9 +3215,13 @@ privkeys | array | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"move\",\"fromaccount\":\"{string}\",\"toaccount\":\"{string}\",\"amount\":\"{float}\",\"minconf\":\"{int}\",\"comment\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/move?fromaccount={string}&toaccount={string}&amount={float}&minconf={int}&comment={string}
@@ -2660,9 +3240,13 @@ comment | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"sendfrom\",\"fromaccount\":\"{string}\",\"toaddress\":\"{string}\",\"amount\":\"{float}\",\"minconf\":\"{int}\",\"comment\":\"{string}\",\"comment2\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/sendfrom?fromaccount={string}&toaddress={string}&amount={float}&minconf={int}&comment={string}&comment2={string}
@@ -2682,9 +3266,13 @@ comment2 | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"sendmany\",\"fromaccount\":\"{string}\",\"array\":\"{array}\",\"minconf\":\"{int}\",\"comment\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/sendmany?fromaccount={string}&array={array}&minconf={int}&comment={string}
@@ -2702,9 +3290,13 @@ comment | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"ramchain\",\"method\":\"sendtoaddress\",\"address\":\"{string}\",\"amount\":\"{float}\",\"comment\":\"{string}\",\"comment2\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/ramchain/sendtoaddress?address={string}&amount={float}&comment={string}&comment2={string}
@@ -2723,12 +3315,42 @@ need to create help/hash.md file
 
 ## method: hex
 
-put helpful info here
+This API call is used to convert any input string to hexadecimal value. Converting a string to hexadecimal provides a single long alphanumerical string.
 
+The example shows if we convert a small example of HTML code to hexadecimal using API call what it would look like:
+
+> Example string (HTML Code):
+
+```text
+<html><head><title>Home Page</title></head><body><h1>Hello World</h1><p>This is test.</p></body></html>
+```
+
+> HTTP API call example for converting to hexadecimal:
+
+```text
+http://127.0.0.1:7778/api/hash/hex?message=<html><head><title>Home+Page</title></head><body><h1>Hello+World</h1><p>This+is+test.</p></body></html>
+```
+
+> End result:
+
+```text
+{
+  "result": "hash calculated",
+  "message": "<html><head><title>Home Page</title></head><body><h1>Hello World</h1><p>This is test.</p></body></html>",
+  "hex": "3c68746d6c3e3c686561643e3c7469746c653e486f6d6520506167653c2f7469746c653e3c2f686561643e3c626f64793e3c68313e48656c6c6f20576f726c643c2f68313e3c703e5468697320697320746573742e3c2f703e3c2f626f64793e3c2f68746d6c3e00",
+  "tag": "7729339918800585698"
+}
+```
+
+
+
+> Shell command format:
 
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"hex\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/hex?message={string}
@@ -2743,9 +3365,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"unhex\",\"hexmsg\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/unhex?hexmsg={string}
@@ -2760,9 +3386,13 @@ hexmsg | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"curve25519_pair\",\"element\":\"{hash}\",\"scalar\":\"{hash}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/curve25519_pair?element={hash}&scalar={hash}
@@ -2778,9 +3408,13 @@ scalar | hash | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"NXT\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/NXT?passphrase={string}
@@ -2795,9 +3429,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"curve25519\",\"pubkey\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/curve25519?pubkey={string}
@@ -2812,9 +3450,13 @@ pubkey | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"crc32\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/crc32?message={string}
@@ -2829,9 +3471,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"base64_encode\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/base64_encode?message={string}
@@ -2846,9 +3492,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"base64_decode\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/base64_decode?message={string}
@@ -2863,9 +3513,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"rmd160_sha256\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/rmd160_sha256?message={string}
@@ -2880,9 +3534,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"sha256_sha256\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/sha256_sha256?message={string}
@@ -2897,9 +3555,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"sha224\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/sha224?message={string}
@@ -2914,9 +3576,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"sha256\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/sha256?message={string}
@@ -2931,9 +3597,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"sha384\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/sha384?message={string}
@@ -2948,9 +3618,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"sha512\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/sha512?message={string}
@@ -2965,9 +3639,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"rmd128\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/rmd128?message={string}
@@ -2982,9 +3660,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"rmd160\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/rmd160?message={string}
@@ -2999,9 +3681,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"rmd256\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/rmd256?message={string}
@@ -3016,9 +3702,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"rmd320\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/rmd320?message={string}
@@ -3033,9 +3723,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"sha1\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/sha1?message={string}
@@ -3050,9 +3744,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"md2\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/md2?message={string}
@@ -3067,9 +3765,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"md4\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/md4?message={string}
@@ -3084,9 +3786,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"md5\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/md5?message={string}
@@ -3101,9 +3807,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"tiger192_3\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/tiger192_3?message={string}
@@ -3118,9 +3828,13 @@ message | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hash\",\"method\":\"whirlpool\",\"message\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hash/whirlpool?message={string}
@@ -3139,9 +3853,13 @@ need to create help/hmac.md file
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hmac\",\"method\":\"sha224\",\"message\":\"{string}\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hmac/sha224?message={string}&passphrase={string}
@@ -3157,9 +3875,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hmac\",\"method\":\"sha256\",\"message\":\"{string}\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hmac/sha256?message={string}&passphrase={string}
@@ -3175,9 +3897,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hmac\",\"method\":\"sha384\",\"message\":\"{string}\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hmac/sha384?message={string}&passphrase={string}
@@ -3193,9 +3919,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hmac\",\"method\":\"sha512\",\"message\":\"{string}\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hmac/sha512?message={string}&passphrase={string}
@@ -3211,9 +3941,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hmac\",\"method\":\"rmd128\",\"message\":\"{string}\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hmac/rmd128?message={string}&passphrase={string}
@@ -3229,9 +3963,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hmac\",\"method\":\"rmd160\",\"message\":\"{string}\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hmac/rmd160?message={string}&passphrase={string}
@@ -3247,9 +3985,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hmac\",\"method\":\"rmd256\",\"message\":\"{string}\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hmac/rmd256?message={string}&passphrase={string}
@@ -3265,9 +4007,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hmac\",\"method\":\"rmd320\",\"message\":\"{string}\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hmac/rmd320?message={string}&passphrase={string}
@@ -3283,9 +4029,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hmac\",\"method\":\"sha1\",\"message\":\"{string}\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hmac/sha1?message={string}&passphrase={string}
@@ -3301,9 +4051,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hmac\",\"method\":\"md2\",\"message\":\"{string}\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hmac/md2?message={string}&passphrase={string}
@@ -3319,9 +4073,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hmac\",\"method\":\"md4\",\"message\":\"{string}\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hmac/md4?message={string}&passphrase={string}
@@ -3337,9 +4095,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hmac\",\"method\":\"md5\",\"message\":\"{string}\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hmac/md5?message={string}&passphrase={string}
@@ -3355,9 +4117,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hmac\",\"method\":\"tiger192_3\",\"message\":\"{string}\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hmac/tiger192_3?message={string}&passphrase={string}
@@ -3373,9 +4139,13 @@ passphrase | string | no help info
 put helpful info here
 
 
+> Shell command format:
+
 ```shell
 curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"hmac\",\"method\":\"whirlpool\",\"message\":\"{string}\",\"passphrase\":\"{string}\"}"
 ```
+
+> HTTP API call format:
 
 ```url
 http://127.0.0.1:7778/api/hmac/whirlpool?message={string}&passphrase={string}
