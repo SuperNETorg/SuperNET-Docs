@@ -58,6 +58,10 @@ vagrant up
 
 You can now see the docs at http://localhost:4567 or http://127.0.0.1:4567.
 
+Or as an alternative I have created a shell script to make life or documentation writer a bit easier. Once you have made changes to any .json file in iguana/help/ directory, just execute the `get_html.sh` script from slate/ directory.
+
+It will delete `iguana/index7778.html` file, access url http://127.0.0.1:7778 using curl, and then process slate to build and update index.html file under `slate/build` directory. This makes the finale distributeable index.html file which can be opened by just double clicking that index.html file, and opening it in a web browser. no need to access any http://localhost etc.
+
 You can also make static html pages of the so far docs by executing `./deploy.sh`. It's totaly option if you want to build the static html files or not.
 
 Join [SuperNET Slack] (http://slackinvite.supernet.org) #iguana channel to keep updated with iguana development and get help on iguana API.
