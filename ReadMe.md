@@ -43,6 +43,9 @@ There are few steps to update **_API.md**:
 To preview the slate documents, you will first need to install slate. For that execute these commands from directory **slate/**:
 
 ```shell
+# Make sure to have ruby-dev package installed.
+# Not having ruby-dev gave issues installing ffi gem package
+
 # either run this to run locally
 bundle install
 bundle exec middleman server
