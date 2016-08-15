@@ -1,0 +1,17 @@
+{
+  "agent": "bitcoinrpc",
+  "method": "getblock",
+  "blockhash": "The hash of the header of the block to get, encoded as hex in RPC byte order",
+  "verbose": "Get the resultant block in serialized block format or decoded JSON Object format",
+  "remoteonly": "Whether to include remote block in output or not",
+  "help": "The getblock RPC gets a block with a particular header hash from the local block database either as a JSON object or as a serialized block\n\nParameter #1—header hash \n\n Parameter #2—JSON or hex output \n\n Result (if verbose was 0/hex)—a serialized block \n\n Result (if verbose was 1/json or omitted)—a JSON block \n\n> Command Output Response:\n\n```\n{\n  \"hash\":\"hash, (string) the block hash (same as provided)\",\n  \"confirmations\": \" n, (numeric) The number of confirmations or -1 if the block is not on the main chain\",\n  \"size\": \" n,(numeric) The block size\",\n  \"height\": \"n, (numeric) The block height or index\",\n  \"version\": \" n, (numeric) The block version\",\n \"merkleroot\" : \"xxxx, (string) The merkle root\",\n  \"tx\" : [\n            \"transactionid\"    \" The transaction id -(string array of transactionis IDs)     ,...\" ],\n  \"time\" : \"ttt, (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)\",\n  \"mediantime\" : \"ttt,    (numeric) The median block time in seconds since epoch (Jan 1 1970 GMT)\",\n  \"nonce\" : \"n, (numeric) The nonce\",\n  \"bits\" : \"1d00ffff, (string) The bits\",\n  \"difficulty\" : \"x.xxx,  (numeric) The difficulty\",\n  \"chainwork\" : \"xxxx, (string) Expected number of hashes required to produce the chain up to this block (in hex)\",\n  \"previousblockhash\" : \"hash,  (string) The hash of the previous block\",\n  \"nextblockhash\" : \"hash, (string) The hash of the next block\"\n\n}\n```\n",
+  "teststatus": [
+    {
+      "tester": "bob",
+      "result": "adding any description of result here as you wish",
+      "notes": "add any specific notes as you find good",
+      "automated": "well only kashif knows about scripts!",
+      "sourcefile": "bitcoinrpc_getblock_test.py"
+    }
+  ]
+}
