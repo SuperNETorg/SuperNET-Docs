@@ -3,7 +3,7 @@
   "method": "getinfo",
   "field1": "put in helpful info field0",
   "field1": "put in helpful info for field1",
-  "help":"The getinfo RPC prints various information about the node and the network \n\n Parameters: none \n\n Result—information about the node and network",
+  "help":"The getinfo RPC prints various information about the node and the network. \n\n Parameters: none \n\n Result—information about the node and network.",
   "teststatus": [
     {
       "tester": "bob",
