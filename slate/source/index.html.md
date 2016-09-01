@@ -12,6 +12,7 @@ toc_footers:
 includes:
   - API
   - errors
+  - glossary
 
 search: true
 ---
