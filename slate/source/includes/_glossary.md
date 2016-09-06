@@ -112,3 +112,65 @@ A chain of blocks with each block referencing the block that preceded it. The mo
 - <a href='https://bitcoin.org/en/developer-guide#block-chain'>Block chain</a> — Bitcoin.org Developer Guide
 
 - <a href='https://en.bitcoin.it/wiki/Block_chain'>Block chain</a> — Bitcoin Wiki
+
+## Best Header Chain
+<b> Header Chain, Best Header Chain </b>
+
+### Definition
+
+A chain of block headers with each header linking to the header that preceded it; the most-difficult-to-recreate chain is the best header chain
+
+### Synonyms
+
+- Header chain
+
+- Best header chain
+
+### Not To Be Confused With
+ - Block chain
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-header-chain'>Header chain</a> — Bitcoin.org Developer Guide
+
+- <a href='http://bitcoin.stackexchange.com/questions/35448/is-it-chain-of-headers-rather-than-a-chain-of-blocks'>Is it a chain of headers rather than a chain of blocks?</a> — Bitcoin StackExchange
+
+## Bitcoins
+<b> Denominations </b>
+
+### Definition
+
+Denominations of Bitcoin value, usually measured in fractions of a bitcoin but sometimes measured in multiples of a satoshi. One bitcoin equals 100,000,000 satoshis.
+
+### Synonyms
+
+- Denomination
+
+- Bitcoins
+
+- Satoshis
+
+### Not To Be Confused With
+
+- Binary bits, a unit of data with two possible values
+
+### Links
+
+- <a href='https://en.bitcoin.it/wiki/Units'>Bitcoin Units</a> — Bitcoin Wiki
+
+## Block
+<b> Block, Block Of Transactions </b>
+
+### Definition
+
+One or more transactions prefaced by a block header and protected by proof of work. Blocks are the data stored on the block chain.
+
+### Synonyms
+
+- Block
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#block-chain-overview'>Block</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Block'>Block</a> — Bitcoin Wiki
