@@ -90,3 +90,25 @@ The method used in Bitcoin for converting 160-bit hashes into P2PKH and P2SH add
 
    - <a href='https://en.bitcoin.it/wiki/Base58Check_encoding'>Base58Check encoding</a> — Bitcoin Wiki
 
+## Best Block Chain
+<b> Block Chain </b>
+
+### Definition
+
+A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain.
+
+### Synonyms
+
+- Block chain
+
+- Best block chain
+
+### Not To Be Confused With
+
+- Header chain
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#block-chain'>Block chain</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Block_chain'>Block chain</a> — Bitcoin Wiki
