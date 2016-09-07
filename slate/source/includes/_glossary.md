@@ -174,3 +174,72 @@ One or more transactions prefaced by a block header and protected by proof of wo
 - <a href='https://bitcoin.org/en/developer-guide#block-chain-overview'>Block</a> — Bitcoin.org Developer Guide
 
 - <a href='https://en.bitcoin.it/wiki/Block'>Block</a> — Bitcoin Wiki
+
+## Block 0
+<b>Genesis Block, Block 0</b>
+
+### Definition
+
+The first block in the Bitcoin block chain.
+
+### Synonyms
+
+- Genesis block
+
+- Block 0
+
+### Not To Be Confused With
+
+- Generation transaction (the first transaction in a block)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-genesis-block'>Genesis block</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Genesis_block'>Genesis block</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/10009/why-can-t-the-genesis-block-coinbase-be-spent'>Why can’t the genesis block coinbase transaction be spent?</a> — Bitcoin StackExchange 
+
+## Block Chain
+<b>Block Chain</b>
+
+### Definition
+
+A chain of blocks with each block referencing the block that preceded it. The most-difficult-to-recreate chain is the best block chain.
+
+### Synonyms
+
+- Block chain
+
+- Best block chain
+
+### Not To Be Confused With
+
+- Header chain
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#block-chain'>Block chain</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Block_chain'>Block chain</a> — Bitcoin Wiki
+
+## Block Header
+<b>Block Header</b>
+
+### Definition
+
+An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work.
+
+### Synonyms
+
+- Block header
+
+- Header
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#block-headers'>Block header</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Block_hashing_algorithm'>Block hashing algorithm</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/8031/what-are-bitcoin-miners-really-solving'>What are Bitcoin miners really solving?</a> — Bitcoin StackExchange
