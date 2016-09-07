@@ -243,3 +243,91 @@ An 80-byte header belonging to a single block which is hashed repeatedly to crea
 - <a href='https://en.bitcoin.it/wiki/Block_hashing_algorithm'>Block hashing algorithm</a> — Bitcoin Wiki
 
 - <a href='http://bitcoin.stackexchange.com/questions/8031/what-are-bitcoin-miners-really-solving'>What are Bitcoin miners really solving?</a> — Bitcoin StackExchange
+
+## Block Height
+<b>Block Chain Height, Block Height</b>
+
+### Definition
+
+The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it.
+
+### Synonyms
+
+- Height
+
+- Block height
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-block-height'>Block height</a> — Bitcoin.org Developer Guide
+
+- <a href='http://bitcoin.stackexchange.com/questions/18561/definition-of-blockchain-height'>Definition of block height</a> — Bitcoin StackExchange
+
+- <a href='http://bitcoin.stackexchange.com/questions/30764/why-block-height-is-required-in-coinbase'>Why is block height required in the coinbase?</a> — Bitcoin StackExchange
+
+- <a href='http://bitcoin.stackexchange.com/questions/24309/is-block-height-always-sequential'>Is block height always sequencial?</a> — Bitcoin StackExchange
+
+## Block Reward
+<b>Block Reward, Block Miner Reward</b>
+
+### Definition
+
+The amount that miners may claim as a reward for creating a block. Equal to the sum of the block subsidy (newly available satoshis) plus the transactions fees paid by transactions included in the block.
+
+### Synonyms
+
+- Block reward
+
+### Not To Be Confused With
+
+- Block subsidy
+
+- Transaction fees
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#term-block-reward'>Block reward</a> — Bitcoin.org Developer Reference
+
+## Blocks-First Sync
+<b>Blocks-First, Blocks-First Sync</b>
+
+### Definition
+
+Synchronizing the block chain by downloading each block from a peer and then validating it.
+
+### Synonyms
+
+- Blocks-first sync
+
+### Not To Be Confused With
+
+- Headers-first sync
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#blocks-first'>Blocks-first sync</a> — Bitcoin.org Developer Guide
+
+## Bloom Filter
+<b>Bloom Filter</b>
+
+### Definition
+
+A filter used primarily by SPV clients to request only matching transactions and merkle blocks from full nodes.
+
+### Synonyms
+
+- Bloom filter
+
+### Not To Be Confused With
+
+- Bloom filter (general computer science term, of which Bitcoin’s bloom filters are a specific implementation)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#bloom-filters'>Bloom filter</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki'>BIP37: Connection Bloom Filtering </a>— Bitcoin Improvement Proposals
+
+- <a href='https://github.com/bitcoin/bitcoin/pull/1795'>Pull request that implemented bloom filters in Bitcoin Core </a> — GitHub
+
+- <a href='https://bitcointalk.org/index.php?topic=252937.0'>Discussion about bloom filtering and SPV clients</a> — BitcoinTalk
