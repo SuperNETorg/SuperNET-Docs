@@ -331,3 +331,72 @@ A filter used primarily by SPV clients to request only matching transactions and
 - <a href='https://github.com/bitcoin/bitcoin/pull/1795'>Pull request that implemented bloom filters in Bitcoin Core </a> — GitHub
 
 - <a href='https://bitcointalk.org/index.php?topic=252937.0'>Discussion about bloom filtering and SPV clients</a> — BitcoinTalk
+
+## Chain Code
+<b>Chain Code, HD Wallet Chain Code</b>
+
+### Definition
+
+In HD wallets, 256 bits of entropy added to the public and private keys to help them generate secure child keys; the master chain code is usually derived from a seed along with the master private key
+
+### Synonyms
+
+- Chain code
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-chain-code'>Chain code</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki'>BIP32: Hierarchical Deterministic Wallets</a> — Bitcoin Improvement Proposals
+
+- <a href='https://en.bitcoin.it/wiki/Deterministic_wallet'>Deterministic wallet</a> — Bitcoin wiki
+
+## Change Address 
+<b>Change, Change Address, Change Output</b>
+
+### Definition
+
+An output in a transaction which returns satoshis to the spender, thus preventing too much of the input value from going to transaction fees.
+
+### Synonyms
+
+- Change address
+
+- Change output
+
+### Not To Be Confused With
+
+- Address reuse
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-change-output'>Change address</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Change'>Change</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/35412/why-does-bitcoin-use-separate-change-addresses'>Why does Bitcoin Core use separate change addresses?</a> — Bitcoin StackExchange
+
+## Change Output
+<b>Change, Change Address, Change Output</b>
+
+### Definition
+
+An output in a transaction which returns satoshis to the spender, thus preventing too much of the input value from going to transaction fees.
+
+### Synonyms
+
+- Change address
+
+- Change output
+
+### Not To Be Confused With
+
+- Address reuse
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#transaction-fees-and-change'>Change address</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Change'>Change</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/35412/why-does-bitcoin-use-separate-change-addresses'>Why does Bitcoin Core use separate change addresses?</a> — Bitcoin StackExchange
