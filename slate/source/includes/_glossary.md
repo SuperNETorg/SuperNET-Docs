@@ -400,3 +400,293 @@ An output in a transaction which returns satoshis to the spender, thus preventin
 - <a href='https://en.bitcoin.it/wiki/Change'>Change</a> — Bitcoin Wiki
 
 - <a href='http://bitcoin.stackexchange.com/questions/35412/why-does-bitcoin-use-separate-change-addresses'>Why does Bitcoin Core use separate change addresses?</a> — Bitcoin StackExchange
+
+## Child Key
+<b>Child Key, HD Wallet Child Key</b>
+
+### Definition
+
+In HD wallets, a key derived from a parent key. The key can be either a private key or a public key, and the key derivation may also require a chain code.
+
+### Synonyms
+
+- Child key
+
+- Child public key
+
+- Child private key
+
+### Not To Be Confused With
+
+- Public key (derived from a private key, not a parent key)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-child-public-key'>Child key</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki'>BIP32: Hierarchical Deterministic Wallets</a> — Bitcoin Improvement Proposals
+ 
+## Child Private Key
+<b>Child Key, HD Wallet Child Key</b>
+
+### Definition
+
+In HD wallets, a key derived from a parent key. The key can be either a private key or a public key, and the key derivation may also require a chain code.
+
+### Synonyms
+
+- Child key
+
+- Child public key
+
+- Child private key
+
+### Not To Be Confused With
+
+- Public key (derived from a private key, not a parent key)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-child-public-key'>Child key</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki'>BIP32: Hierarchical Deterministic Wallets</a> — Bitcoin Improvement Proposals
+
+## Child Public Key
+<b>Child Key, HD Wallet Child Key</b>
+
+### Definition
+
+In HD wallets, a key derived from a parent key. The key can be either a private key or a public key, and the key derivation may also require a chain code.
+
+### Synonyms
+
+- Child key
+
+- Child public key
+
+- Child private key
+
+### Not To Be Confused With
+
+- Public key (derived from a private key, not a parent key)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-child-public-key'>Child key</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki'>BIP32: Hierarchical Deterministic Wallets</a> — Bitcoin Improvement Proposals
+
+## Coinbase 
+<b>Coinbase, Coinbase Field</b>
+
+### Definition
+
+A special field used as the sole input for coinbase transactions. The coinbase allows claiming the block reward and provides up to 100 bytes for arbitrary data.
+
+### Synonyms
+
+- Coinbase
+
+### Not To Be Confused With
+
+- Coinbase transaction
+
+- Coinbase.com
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#term-coinbase-field'>Coinbase</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Coinbase'>Coinbase</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/4571/what-is-the-coinbase'>What is the coinbase?</a> — Bitcoin StackExchange
+
+## Coinbase Transaction
+<b>Coinbase / Generation Transaction</b>
+
+### Definition
+
+The first transaction in a block. Always created by a miner, it includes a single coinbase.
+
+### Synonyms
+
+- Coinbase transaction
+
+- Generation transaction
+
+### Not To Be Confused With
+
+- Coinbase (the unique part of a coinbase transaction)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#term-coinbase-tx'>Coinbase transaction</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Transaction#Generation'>Generation transaction</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/32091/who-generates-the-coinbase-transaction'>Who generates the coinbase transaction?</a> — Bitcoin StackExchange
+
+- <a href='http://bitcoin.stackexchange.com/questions/30349/must-a-block-contain-a-coinbase-transaction'>Must a block contain a coinbase transaction?</a> — Bitcoin StackExchange
+
+## Compact Size
+<b>CompactSize Unsigned Integer</b>
+
+### Definition
+
+A type of variable-length integer commonly used in the Bitcoin P2P protocol and Bitcoin serialized data structures.
+
+### Synonyms
+
+- CompactSize
+
+### Not To Be Confused With
+
+- VarInt (a data type Bitcoin Core uses for local data storage)
+
+- Compact (the data type used for nBits in the block header)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#compactsize-unsigned-integers'>CompactSize Unsigned Integers</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Protocol_documentation#Variable_length_integer'>Variable length integers (compactSize)</a> — Bitcoin Wiki
+
+## Compressed Public Keyy
+<b>Compressed Public Key</b>
+
+### Definition
+
+An ECDSA public key that is 33 bytes long rather than the 65 bytes of an uncompressed public key.
+
+### Synonyms
+
+- Compressed public key
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#public-key-formats'>Public key formats</a> — Bitcoin.org Developer Guide
+
+- <a href='http://bitcoin.stackexchange.com/questions/3059/what-is-a-compressed-bitcoin-key'>What is a compressed public key?</a> — Bitcoin StackExchange
+
+- <a href='http://bitcoin.stackexchange.com/questions/5952/why-does-bitcoin-support-both-compressed-and-uncompressed-keys-addresses'>Why does Bitcoin Core support both compressed and uncompressed keys?</a> — Bitcoin StackExchange
+
+## Confirmation Score
+<b>Confirmation Score, Confirmed Transaction</b>
+
+### Definition
+
+A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher.
+
+### Synonyms
+
+- Confirmation score
+
+- Confirmations
+
+- Confirmed transaction
+
+- Unconfirmed transaction
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-confirmation'>Confirmations</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Confirmation'>Confirmation</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/146/what-are-bitcoin-confirmations/160#160'>What are confirmations?</a> — Bitcoin StackExchange
+
+- <a href='http://bitcoin.stackexchange.com/questions/32562/when-to-worry-about-1-confirmation-payments'>When should I worry about 1-confirmation payments?</a> — Bitcoin StackExchange
+
+## Confirmations
+<b>Confirmation Score, Confirmed Transaction</b>
+
+### Definition
+
+A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher.
+
+### Synonyms
+
+- Confirmation score
+
+- Confirmations
+
+- Confirmed transaction
+
+- Unconfirmed transaction
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-confirmation'>Confirmations</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Confirmation'>Confirmation</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/146/what-are-bitcoin-confirmations/160#160'>What are confirmations?</a> — Bitcoin StackExchange
+
+- <a href='http://bitcoin.stackexchange.com/questions/32562/when-to-worry-about-1-confirmation-payments'>When should I worry about 1-confirmation payments?</a> — Bitcoin StackExchange
+
+## Confirmed Transaction
+<b>Confirmation Score, Confirmed Transaction</b>
+
+### Definition
+
+A score indicating the number of blocks on the best block chain that would need to be modified to remove or modify a particular transaction. A confirmed transaction has a confirmation score of one or higher.
+
+### Synonyms
+
+- Confirmation score
+
+- Confirmations
+
+- Confirmed transaction
+
+- Unconfirmed transaction
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-confirmation'>Confirmations</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Confirmation'>Confirmation</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/146/what-are-bitcoin-confirmations/160#160'>What are confirmations?</a> — Bitcoin StackExchange
+
+- <a href='http://bitcoin.stackexchange.com/questions/32562/when-to-worry-about-1-confirmation-payments'>When should I worry about 1-confirmation payments?</a> — Bitcoin StackExchange
+
+## Consensus
+<b>Consensus</b>
+
+### Definition
+
+When several nodes (usually most nodes on the network) all have the same blocks in their locally-validated best block chain.
+
+### Synonyms
+
+- Consensus
+
+### Not To Be Confused With
+
+- Social consensus (often used in discussion among developers to indicate that most people agree with a particular plan)
+
+- Consensus rules (the rules that allow nodes to maintain consensus)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-consensus'>Consensus</a> — Bitcoin.org Developer Guide
+
+## Consensus Rules
+<b>Consensus Rules, Validation Rules</b>
+
+### Definition
+
+The block validation rules that full nodes follow to stay in consensus with other nodes.
+
+### Synonyms
+
+- Consensus rules
+
+### Not To Be Confused With
+
+- Consensus (what happens when nodes follow the same consensus rules)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-consensus-rules'>Consensus rules</a> — Bitcoin.org Developer Guide
