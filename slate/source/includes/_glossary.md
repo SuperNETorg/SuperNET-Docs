@@ -691,7 +691,7 @@ The block validation rules that full nodes follow to stay in consensus with othe
 
 - <a href='https://bitcoin.org/en/developer-guide#term-consensus-rules'>Consensus rules</a> — Bitcoin.org Developer Guide
 
-## Data carrier transaction
+## Data Carrier Transaction
 <b>Null Data (OP_RETURN) Transaction</b>
 
 ### Definition
@@ -716,7 +716,7 @@ A transaction type relayed and mined by default in Bitcoin Core 0.9.0 and later 
 
 - <a href='https://github.com/bitcoin/bitcoin/pull/2738'>Pull request implement null data transactions</a> — GitHub
 
-## Data-pushing opcode
+## Data-Pushing Opcode
 <b>Opcode</b>
 
 ### Definition
