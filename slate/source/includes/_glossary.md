@@ -827,3 +827,139 @@ A transaction that spends the same input as spent in another transaction.
 - <a href='http://bitcoin.stackexchange.com/questions/4974/what-is-a-double-spend'>What is a double spend?</a> — Bitcoin StackExchange
 
 - <a href='http://bitcoin.stackexchange.com/questions/13370/how-do-i-detect-a-double-spend'>How do I detect a double spend?</a> — Bitcoin StackExchange
+
+## Escrow Contract
+<b>Escrow Contract</b>
+
+### Definition
+
+A transaction in which a spender and receiver place funds in a 2-of-2 (or other m-of-n) multisig output so that neither can spend the funds until they’re both satisfied with some external outcome.
+
+### Synonyms
+
+- Escrow contract
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#escrow-and-arbitration'>Escrow contract</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Contract#Example_2:_Escrow_and_dispute_mediation'>Escrow and dispute mediation</a> — Bitcoin Wiki
+
+## Extended Key
+<b>Extended Key, HD Wallet Extended Key</b>
+
+### Definition
+
+In the context of HD wallets, a public key or private key extended with the chain code to allow them to derive child keys.
+
+### Synonyms
+
+- Extended key
+
+- Public extended key
+
+- Private extended key
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-extended-key'>Extended key</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki'>BIP32: hierarchical deterministic wallets</a> — Bitcoin Improvement Proposals
+
+## Fork
+<b>Fork, Accidental Fork</b>
+
+### Definition
+
+When two or more blocks have the same block height, forking the block chain. Typically occurs when two or more miners find blocks at nearly the same time. Can also happen as part of an attack.
+
+### Synonyms
+
+- Fork
+
+### Not To Be Confused With
+
+- Hard fork (a change in consensus rules that breaks security for nodes that don’t upgrade)
+
+- Soft fork (a change in consensus rules that weakens security for nodes that don’t upgrade)
+
+- Software fork (when one or more developers permanently develops a codebase separately from other developers)
+
+- Git fork (when one or more developers temporarily develops a codebase separately from other developers)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-fork'>Fork</a> — Bitcoin.org Developer Guide
+
+- <a href='http://bitcoin.stackexchange.com/questions/3343/what-is-the-longest-blockchain-fork-that-has-been-orphaned-to-date'>What is the longest block chain fork that has been made stale so far?</a> — Bitcoin StackExchange
+
+## Free Transaction
+<b>High-Priority Transaction, Free Tx</b>
+
+### Definition
+
+Transactions that don’t have to pay a transaction fee because their inputs have been idle long enough to accumulated large amounts of priority. Note: miners choose whether to accept free transactions.
+
+### Synonyms
+
+- High-priority transaction
+
+- Free transaction
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-high-priority-transactions'>High-priority transactions</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Free_transaction_relay_policy'>Free transaction relay policy</a> — Bitcoin Wiki
+
+## Generation Transaction
+<b>Coinbase / Generation Transaction</b>
+
+### Definition
+
+The first transaction in a block. Always created by a miner, it includes a single coinbase.
+
+### Synonyms
+
+- Coinbase transaction
+
+- Generation transaction
+
+### Not To Be Confused With
+
+- Coinbase (the unique part of a coinbase transaction)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#term-coinbase-tx'>Coinbase transaction</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Transaction#Generation'>Generation transaction</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/32091/who-generates-the-coinbase-transaction'>Who generates the coinbase transaction?</a> — Bitcoin StackExchange
+
+- <a href='http://bitcoin.stackexchange.com/questions/30349/must-a-block-contain-a-coinbase-transaction'>Must a block contain a coinbase transaction?</a> — Bitcoin StackExchange
+
+## Genesis Block
+<b>Genesis Block, Block 0</b>
+
+### Definition
+
+The first block in the Bitcoin block chain.
+
+### Synonyms
+
+- Genesis block
+
+- Block 0
+
+### Not To Be Confused With
+
+- Generation transaction (the first transaction in a block)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-genesis-block'>Genesis block</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Genesis_block'>Genesis block</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/10009/why-can-t-the-genesis-block-coinbase-be-spent'>Why can’t the genesis block coinbase transaction be spent?</a> — Bitcoin StackExchange
