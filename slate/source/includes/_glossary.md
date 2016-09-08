@@ -690,3 +690,140 @@ The block validation rules that full nodes follow to stay in consensus with othe
 ### Links
 
 - <a href='https://bitcoin.org/en/developer-guide#term-consensus-rules'>Consensus rules</a> — Bitcoin.org Developer Guide
+
+## Data carrier transaction
+<b>Null Data (OP_RETURN) Transaction</b>
+
+### Definition
+
+A transaction type relayed and mined by default in Bitcoin Core 0.9.0 and later that adds arbitrary data to a provably unspendable pubkey script that full nodes don’t have to store in their UTXO database.
+
+### Synonyms
+
+- Null data transaction
+
+- OP_RETURN transaction
+
+- Data carrier transaction
+
+### Not To Be Confused With
+
+- OP_RETURN (an opcode used in one of the outputs in an OP_RETURN transaction)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-null-data'>Null data transaction</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bitcoin/pull/2738'>Pull request implement null data transactions</a> — GitHub
+
+## Data-pushing opcode
+<b>Opcode</b>
+
+### Definition
+
+Operation codes from the Bitcoin Script language which push data or perform functions within a pubkey script or signature script.
+
+### Synonyms
+
+- Opcode
+
+- Data-pushing opcode
+
+- Non-data-pushing opcode
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#opcodes'>Opcodes</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Script'>List of opcodes</a> — Bitcoin Wiki
+
+## Denomination
+<b>Denominations</b>
+
+### Definition
+
+Denominations of Bitcoin value, usually measured in fractions of a bitcoin but sometimes measured in multiples of a satoshi. One bitcoin equals 100,000,000 satoshis.
+
+### Synonyms
+
+- Denomination
+
+- Bitcoins
+
+- Satoshis
+
+### Not To Be Confused With
+
+- Binary bits, a unit of data with two possible values
+
+### Links
+
+- <a href='https://en.bitcoin.it/wiki/Units'>Bitcoin Units</a> — Bitcoin Wiki
+
+## Difficulty
+<b>Difficulty, Network Difficulty</b>
+
+### Definition
+
+How difficult it is to find a block relative to the difficulty of finding the easiest possible block. The easiest possible block has a proof-of-work difficulty of 1.
+
+### Synonyms
+
+- Difficulty
+
+- Network difficulty
+
+### Not To Be Confused With
+
+- Target threshold (the value from which difficulty is calculated)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#proof-of-work'>Difficulty</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Difficulty'>Difficulty</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/5838/how-is-difficulty-calculated'>How is difficulty calculated?</a> — Bitcoin StackExchange
+
+## DNS Seed
+<b>DNS Seed</b>
+
+### Definition
+
+A DNS server which returns IP addresses of full nodes on the Bitcoin network to assist in peer discovery.
+
+### Synonyms
+
+- DNS seed
+
+### Not To Be Confused With
+
+- HD wallet seeds
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-dns-seed'>DNS seed</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Satoshi_Client_Node_Discovery#DNS_Addresses'>DNS seeds</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/14371/what-is-a-dns-seed-node-vs-a-seed-node'>What is a DNS seed versus a seed node?</a> — Bitcoin StackExchange
+
+## Double Spend
+<b>Double Spend</b>
+### Definition
+
+A transaction that spends the same input as spent in another transaction.
+
+### Synonyms
+
+- Double spend
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-double-spend'>Double spend</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Double-spending'>Double spending</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/4974/what-is-a-double-spend'>What is a double spend?</a> — Bitcoin StackExchange
+
+- <a href='http://bitcoin.stackexchange.com/questions/13370/how-do-i-detect-a-double-spend'>How do I detect a double spend?</a> — Bitcoin StackExchange
