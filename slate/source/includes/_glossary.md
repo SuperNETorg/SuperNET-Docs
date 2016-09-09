@@ -963,3 +963,223 @@ The first block in the Bitcoin block chain.
 - <a href='https://en.bitcoin.it/wiki/Genesis_block'>Genesis block</a> — Bitcoin Wiki
 
 - <a href='http://bitcoin.stackexchange.com/questions/10009/why-can-t-the-genesis-block-coinbase-be-spent'>Why can’t the genesis block coinbase transaction be spent?</a> — Bitcoin StackExchange
+
+## Hard Fork
+<b>Hard Fork, Hard-Forking Change</b>
+
+### Definition
+
+A permanent divergence in the the block chain, commonly occurs when non-upgraded nodes can’t validate blocks created by upgraded nodes that follow newer consensus rules.
+
+### Synonyms
+
+- Hard fork
+
+### Not To Be Confused With
+
+- Fork (a regular fork where all nodes follow the same consensus rules, so the fork is resolved once one chain has more proof of work than another)
+
+- Soft fork (a temporary divergence in the block chain caused by non-upgraded nodes not following new consensus rules)
+
+- Software fork (when one or more developers permanently develops a codebase separately from other developers)
+
+- Git fork (when one or more developers temporarily develops a codebase separately from other developers
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-hard-fork'>Hard fork</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Hardfork'>Hard fork</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/36090/has-a-hard-fork-ever-occurred'>Has a hard fork ever occurred?</a> — Bitcoin StackExchange
+
+## Hardened Extended Key
+<b>Hardened Extended Key (HD Wallets)</b>
+
+### Definition
+
+A variation on HD wallet extended keys where only the hardened extended private key can derive child keys. This prevents compromise of the chain code plus any private key from putting the whole wallet at risk.
+
+### Synonyms
+
+- Hardened extended key
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-hardened-extended-private-key'>Hardened extended private keys</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki'>BIP32: hierarchical deterministic wallets</a> — Bitcoin Improvement Proposals
+
+## HD Protocol
+<b>HD Protocol, HD Wallet, BIP32</b>
+
+### Definition
+
+The Hierarchical Deterministic (HD) key creation and transfer protocol (BIP32), which allows creating child keys from parent keys in a hierarchy. Wallets using the HD protocol are called HD wallets.
+
+### Synonyms
+
+- HD protocol
+
+- HD wallet
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-hd-protocol'>HD Protocol</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki'>BIP32: hierarchical deterministic wallets</a> — Bitcoin Improvement Proposals
+
+- <a href='https://en.bitcoin.it/wiki/Deterministic_wallet'>Deterministic wallet</a> — Bitcoin Wiki
+
+## HD Wallet
+<b>HD Protocol, HD Wallet, BIP32</b>
+
+### Definition
+
+The Hierarchical Deterministic (HD) key creation and transfer protocol (BIP32), which allows creating child keys from parent keys in a hierarchy. Wallets using the HD protocol are called HD wallets.
+
+### Synonyms
+
+- HD protocol
+
+- HD wallet
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#hierarchical-deterministic-key-creation'>HD Protocol</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki'>BIP32: hierarchical deterministic wallets</a> — Bitcoin Improvement Proposals
+
+- <a href='https://en.bitcoin.it/wiki/Deterministic_Wallet'>Deterministic wallet</a> — Bitcoin Wiki
+
+## HD Wallet
+<b>HD Wallet Seed, Root Seed</b>
+
+### Definition
+
+A potentially-short value used as a seed to generate the master private key and master chain code for an HD wallet.
+
+### Synonyms
+
+- HD wallet seed
+
+- Root seed
+
+### Not To Be Confused With
+
+- Mnemonic code / mnemonic seed (a binary root seed formatted as words to make it easier for humans to transcribe and possibly remember)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-root-seed'>Root seed</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki'>BIP32: hierarchical deterministic wallets</a> — Bitcoin Improvement Proposals
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki'>BIP39: mnemonic code for generating deterministic keys</a> — Bitcoin Improvement Proposals
+
+## Header
+<b>Block Header</b>
+
+### Definition
+
+An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work.
+
+### Synonyms
+
+- Block header
+
+- Header
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#block-headers'>Block header</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Block_hashing_algorithm'>Block hashing algorithm</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/8031/what-are-bitcoin-miners-really-solving'>What are Bitcoin miners really solving?</a> — Bitcoin StackExchange
+
+## Header Chain
+<b>Header Chain, Best Header Chain</b>
+
+### Definition
+
+A chain of block headers with each header linking to the header that preceded it; the most-difficult-to-recreate chain is the best header chain
+
+### Synonyms
+
+- Header chain
+
+- Best header chain
+
+### Not To Be Confused With
+
+- Block chain
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-header-chain'>Header chain</a> — Bitcoin.org Developer Guide
+
+- <a href='http://bitcoin.stackexchange.com/questions/35448/is-it-chain-of-headers-rather-than-a-chain-of-blocks'>Is it a chain of headers rather than a chain of blocks?</a> — Bitcoin StackExchange
+
+## Headers-First Sync
+<b>Headers-First, Headers-First Sync</b>
+
+### Definition
+
+Synchronizing the block chain by downloading block headers before downloading the full blocks.
+
+### Synonyms
+
+- Headers-first sync
+
+### Not To Be Confused With
+
+- Blocks-first sync (Downloading entire blocks immediately without first getting their headers)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#headers-first'>Headers-first sync</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bitcoin/pull/4468'>Pull request adding headers-first sync to Bitcoin Core</a> — GitHub
+
+## Height
+<b>Block Chain Height, Block Height</b>
+
+### Definition
+
+The number of blocks preceding a particular block on a block chain. For example, the genesis block has a height of zero because zero block preceded it.
+
+### Synonyms
+
+- Height
+
+- Block height
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-block-height'>Block height</a> — Bitcoin.org Developer Guide
+
+- <a href='http://bitcoin.stackexchange.com/questions/18561/definition-of-blockchain-height'>Definition of block height</a> — Bitcoin StackExchange
+
+- <a href='http://bitcoin.stackexchange.com/questions/30764/why-block-height-is-required-in-coinbase'>Why is block height required in the coinbase?</a> — Bitcoin StackExchange
+
+- <a href='http://bitcoin.stackexchange.com/questions/24309/is-block-height-always-sequential'>Is block height always sequencial?</a> — Bitcoin StackExchange
+
+## High-Priority Transaction
+<b>High-Priority Transaction, Free Tx</b>
+
+### Definition
+
+Transactions that don’t have to pay a transaction fee because their inputs have been idle long enough to accumulated large amounts of priority. Note: miners choose whether to accept free transactions.
+
+### Synonyms
+
+- High-priority transaction
+
+- Free transaction
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-high-priority-transactions'>High-priority transactions</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Free_transaction_relay_policy'>Free transaction relay policy</a> — Bitcoin Wiki
