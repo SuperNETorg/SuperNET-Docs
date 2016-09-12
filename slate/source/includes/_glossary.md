@@ -1183,3 +1183,700 @@ Transactions that don’t have to pay a transaction fee because their inputs hav
 - <a href='https://bitcoin.org/en/developer-guide#term-high-priority-transactions'>High-priority transactions</a> — Bitcoin.org Developer Guide
 
 - <a href='https://en.bitcoin.it/wiki/Free_transaction_relay_policy'>Free transaction relay policy</a> — Bitcoin Wiki
+
+## IBD
+<b>Initial Block Download, IBD</b>
+
+### Definition
+
+The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain.
+
+### Synonyms
+
+- Initial block download
+
+- IBD
+
+### Not To Be Confused With
+
+- Blocks-first sync (syncing includes getting any amount of blocks; IBD is only used for large numbers of blocks)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#initial-block-download'>Initial block download</a> — Bitcoin.org Developer Guide
+
+## Initial Block Download
+<b>Initial Block Download, IBD</b>
+
+### Definition
+
+The process used by a new node (or long-offline node) to download a large number of blocks to catch up to the tip of the best block chain.
+
+### Synonyms
+
+- Initial block download
+
+- IBD
+
+### Not To Be Confused With
+
+- Blocks-first sync (syncing includes getting any amount of blocks; IBD is only used for large numbers of blocks)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#initial-block-download'>Initial block download</a> — Bitcoin.org Developer Guide
+
+## Input
+<b>Input, Transaction Input, TxIn</b>
+
+### Definition
+
+An input in a transaction which contains four fields: an outpoint, a signature script, and a sequence number. The outpoint references a previous output and the signature script allows spending it.
+
+### Synonyms
+
+- Input
+
+- TxIn
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-input'>Input</a> — Bitcoin.org Developer Guide
+
+- <a href='https://bitcoin.org/en/developer-reference#txin'>TxIn</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Transaction#Input'>Inputs</a> — Bitcoin Wiki
+
+## Internal Byte Order
+<b>Internal Byte Order</b>
+
+### Definition
+
+The standard order in which hash digests are displayed as strings—the same format used in serialized blocks and transactions.
+
+### Synonyms
+
+- Internal byte order
+
+### Not To Be Confused With
+
+- RPC byte order (where the byte order is reversed)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#hash-byte-order'>Internal byte order</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Block_hashing_algorithm'>Block hashing algorithm (‘endian conversion’)</a> — Bitcoin Wiki
+
+## Inventory
+<b>Inventory, Block Or Transaction Inventory</b>
+
+### Definition
+
+A data type identifier and a hash; used to identify transactions and blocks available for download through the Bitcoin P2P network.
+
+### Synonyms
+
+- Inventory
+
+### Not To Be Confused With
+
+- Inv message (one of the P2P messages that transmits inventories)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#term-inventory'>Inventory</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Protocol_documentation#Inventory_Vectors'>Inventory vectors</a> — Bitcoin Wiki
+
+## Lightweight Client
+<b>SPV, Simplified Payment Verification</b>
+
+### Definition
+
+A method for verifying particular transactions were included in a block without downloading the entire block. The method is used by some lightweight Bitcoin clients.
+
+### Synonyms
+
+- SPV
+
+- Simplified Payment Verification
+
+- Lightweight client
+
+- Thin client
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#simplified-payment-verification-spv'>SPV</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Thin_Client_Security'>Thin client security</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/32529/what-is-a-thin-client'>What is a thin client?</a> — Bitcoin StackExchange
+
+## Locktime
+<b>Locktime, nLockTime</b>
+
+### Definition
+
+Part of a transaction which indicates the earliest time or earliest block when that transaction may be added to the block chain.
+
+### Synonyms
+
+- Locktime
+
+- nLockTime
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-locktime'>Locktime</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/NLockTime'>nLockTime</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/5914/how-is-locktime-enforced-in-the-standard-client'>How is locktime enforced in Bitcoin Core?</a> — Bitcoin StackExchange
+
+## Mainnet
+<b>Mainnet, Bitcoin Main Network</b>
+
+### Definition
+
+The original and main network for Bitcoin transactions, where satoshis have real economic value.
+
+### Synonyms
+
+- Mainnet
+
+### Not To Be Confused With
+
+- Testnet (an open network very similar to mainnet where satoshis have no value)
+
+- Regtest (a private testing node similar to testnet)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-examples#term-mainnet'>Mainnet</a> — Bitcoin.org Developer Examples
+
+## Majority Attack
+<b>51% Attack, Majority Hash Rate Attack</b>
+
+### Definition
+The ability of someone controlling a majority of network hash rate to revise transaction history and prevent new transactions from confirming.
+
+### Synonyms
+
+- 51 percent attack
+
+- Majority attack
+
+### Links
+
+  - <a href='https://bitcoin.org/en/developer-guide#term-51-attack'>51% attack</a> — Bitcoin.org Developer Guide
+  - <a href='http://bitcoin.stackexchange.com/questions/658/what-can-an-attacker-with-51-of-hash-power-do'>What can an attacker with 51% of hash power do?</a> — Bitcoin StackExchange
+  - <a href='https://bitcoin.org/en/bitcoin-paper'>Bitcoin.pdf</a> — Satoshi Nakamoto (Bitcoin.org)
+  
+## Master Chain Code
+<b>Master Chain Code And Private Key</b>
+
+### Definition
+
+In HD wallets, the master chain code and master private key are the two pieces of data derived from the root seed.
+
+### Synonyms
+
+- Master chain code
+
+- Master private key
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-master-chain-code'>Master chain code</a> — Bitcoin.org Developer Guide
+
+- <a href='https://bitcoin.org/en/developer-guide#hierarchical-deterministic-key-creation'>Master private key</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki'>BIP32: hierarchical deterministic wallets</a> — Bitcoin Improvement Proposals
+
+## Master Private Key
+<b>Master Chain Code And Private Key</b>
+
+### Definition
+
+In HD wallets, the master chain code and master private key are the two pieces of data derived from the root seed.
+
+### Synonyms
+
+- Master chain code
+
+- Master private key
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-master-chain-code'>Master chain code</a> — Bitcoin.org Developer Guide
+
+- <a href='https://bitcoin.org/en/developer-guide#hierarchical-deterministic-key-creation'>Master private key</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki'>BIP32: hierarchical deterministic wallets</a> — Bitcoin Improvement Proposals
+ 
+## Merkle Block
+<b>Merkle Block</b>
+
+### Definition
+
+A partial merkle tree connecting transactions matching a bloom filter to the merkle root of a block.
+
+### Synonyms
+
+- Merkle block
+
+### Not To Be Confused With
+
+- MerkleBlock message (a P2P protocol message that transmits a merkle block)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#merkleblock'>Merkle block</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Protocol_documentation#filterload.2C_filteradd.2C_filterclear.2C_merkleblock'>MerkleBlock P2P protocol message</a> — Bitcoin Wiki
+
+## Merkle Root
+<b>Merkle Root</b>
+
+### Definition
+
+The root node of a merkle tree, a descendant of all the hashed pairs in the tree. Block headers must include a valid merkle root descended from all transactions in that block.
+
+### Synonyms
+
+- Merkle root
+
+### Not To Be Confused With
+
+- Merkle tree (the tree of which the merkle root is the root node)
+
+- Merkle block (a partial merkle branch connecting the root to one or more leaves transactions)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-merkle-root'>Merkle root</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Protocol_documentation#Merkle_Trees'>Merkle trees</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/10479/what-is-the-merkle-root'>What is the merkle root?</a> — Bitcoin StackExchange
+
+- <a href='https://en.wikipedia.org/wiki/Merkle_tree'>Merkle tree</a> — Wikipedia
+
+## Merkle Tree
+<b>Merkle Tree</b>
+
+### Definition
+
+A tree constructed by hashing paired data (the leaves), then pairing and hashing the results until a single hash remains, the merkle root. In Bitcoin, the leaves are almost always transactions from a single block.
+
+### Synonyms
+
+- Merkle tree
+
+### Not To Be Confused With
+
+- Partial merkle branch (a branch connecting one or more leaves to the root)
+
+- Merkle block (a partial merkle branch connecting one or more transactions from a single block to the block merkle root)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-merkle-tree'>Merkle tree</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Protocol_documentation#Merkle_Trees'>Merkle trees</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/1110/how-do-i-implement-a-merkle-tree'>How do I implement a merkle tree?</a> — Bitcoin StackExchange
+
+- <a href='https://en.wikipedia.org/wiki/Merkle_tree'>Merkle tree</a> — Wikipedia
+
+## Message Header
+<b>Message Header</b>
+
+### Definition
+
+The four header fields prefixed to all messages on the Bitcoin P2P network.
+
+### Synonyms
+
+- Message header
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#message-headers'>Message headers</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Protocol_documentation#Message_structure'>Message structure</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/22882/what-is-the-function-of-the-payload-checksum-field-in-the-bitcoin-protocol'>What is the function of the payload checksum in message headers?</a> — Bitcoin StackExchange
+
+## Miner
+<b>Mining, Miner</b>
+
+### Definition
+
+Mining is the act of creating valid Bitcoin blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices.
+
+### Synonyms
+
+- Mining
+
+- Miner
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-miner'>Mining</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Mining'>Mining</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/148/what-exactly-is-mining'>What exactly is mining?</a> — Bitcoin StackExchange
+
+## Miners Fee
+<b>Transaction Fee, Miner Fee</b>
+
+### Definition
+
+The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block.
+
+### Synonyms
+
+- Transaction fee
+
+- Miners fee
+
+### Not To Be Confused With
+
+- Minimum relay fee (the lowest fee a transaction must pay to be accepted into the memory pool and relayed by Bitcoin Core nodes)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-transaction-fee'>Transaction fee</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Transaction_fees'>Transaction fees</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/1195/how-to-calculate-transaction-size-before-sending'>How to calculate transaction fees before sending?</a> — Bitcoin StackExchange
+
+## Minimum Relay Fee
+<b>Minimum Relay Fee</b>
+
+### Definition
+
+The minimum transaction fee a transaction must pay (if it isn’t a high-priority transaction) for a full node to relay that transaction to other nodes. There is no one minimum relay fee—each node chooses its own policy.
+
+### Synonyms
+
+- Minimum relay fee
+
+- Relay fee
+
+### Not To Be Confused With
+
+- Transaction fee (the minimum relay fee is a policy setting that filters out transactions with too-low transaction fees)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-minimum-fee'>Minimum relay fee</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Transaction_fees'>Transaction fees</a> — Bitcoin Wiki
+
+## Mining
+<b>Mining, Miner</b>
+
+### Definition
+
+Mining is the act of creating valid Bitcoin blocks, which requires demonstrating proof of work, and miners are devices that mine or people who own those devices.
+
+### Synonyms
+
+- Mining
+
+- Miner
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#block-chain-overview'>Mining</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Mining'>Mining</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/148/what-exactly-is-mining'>What exactly is mining?</a> — Bitcoin StackExchange
+
+## Multisig
+<b>M-of-N Multisig, Multisig Output<M-of-N Multisig, Multisig Output/b>
+
+### Definition
+
+A pubkey script that provides n number of pubkeys and requires the corresponding signature script provide m minimum number signatures corresponding to the provided pubkeys.
+
+### Synonyms
+
+- Multisig
+
+- Bare multisig
+
+### Not To Be Confused With
+
+- P2SH multisig (a multisig script contained inside P2SH)
+
+- Advanced scripts that require multiple signatures without using OP_CHECKMULTISIG or OP_CHECKMULTISIGVERIFY
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-multisig'>Multisig</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0011.mediawiki'>BIP11: m-of-n standard transactions</a> — Bitcoin Improvement Proposals
+
+- <a href='http://bitcoin.stackexchange.com/questions/3718/what-are-multi-signature-transactions'>What are multi-signature transactions?</a> — Bitcoin StackExchange
+
+## nBits
+<b>nBits, Target Threshold</b>
+
+### Definition
+
+The target is the threshold below which a block header hash must be in order for the block to valid, and nBits is the encoded form of the target threshold as it appears in the block header.
+
+### Synonyms
+
+- nBits
+
+- Target
+
+### Not To Be Confused With
+
+Difficulty (a number measuring the difficulty of finding a header hash relative to the difficulty of finding a header hash with the easiest target)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-target'>Target</a> — Bitcoin.org Developer Guide
+
+- <a href='https://bitcoin.org/en/developer-reference#target-nbits'>nBits</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Target'>Target</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/23912/how-is-the-target-section-of-a-block-header-calculated'>How is the target section of the block header calculated?</a> — Bitcoin StackExchange
+
+## Network Difficulty
+<b>Difficulty, Network Difficulty</b>
+
+### Definition
+
+How difficult it is to find a block relative to the difficulty of finding the easiest possible block. The easiest possible block has a proof-of-work difficulty of 1.
+
+### Synonyms
+
+- Difficulty
+
+- Network difficulty
+
+### Not To Be Confused With
+
+- Target threshold (the value from which difficulty is calculated)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-difficulty'>Difficulty</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Difficulty'>Difficulty</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/5838/how-is-difficulty-calculated'>How is difficulty calculated?</a> — Bitcoin StackExchange
+
+## Network Magic
+<b>Start String, Network Magic</b>
+
+### Definition
+
+- Four defined bytes which start every message in the Bitcoin P2P protocol to allow seeking to the next message.
+
+### Synonyms
+
+- Start string
+
+- Network magic
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#term-start-string'>Start string</a> — Bitcoin.org Developer Reference
+
+- <a href='http://bitcoin.stackexchange.com/questions/2337/how-was-the-magic-network-id-value-chosen'>How was the start string chosen?</a> — Bitcoin StackExchange
+
+## NLockTime
+<b>Locktime, nLockTime</b>
+
+### Definition
+
+Part of a transaction which indicates the earliest time or earliest block when that transaction may be added to the block chain.
+
+### Synonyms
+
+- Locktime
+
+- nLockTime
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#locktime-and-sequence-number'>Locktime</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/NLockTime'>nLockTime</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/5914/how-is-locktime-enforced-in-the-standard-client'>How is locktime enforced in Bitcoin Core?</a> — Bitcoin StackExchange
+
+## Non-data-pushing opcode
+<b>Opcode</b>
+
+### Definition
+
+Operation codes from the Bitcoin Script language which push data or perform functions within a pubkey script or signature script.
+
+### Synonyms
+
+- Opcode
+
+- Data-pushing opcode
+
+- Non-data-pushing opcode
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#opcodes'>Opcodes</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Script'>List of opcodes</a> — Bitcoin Wiki
+
+## Null Data Transaction
+<b>Null Data (OP_RETURN) Transaction</b>
+
+### Definition
+
+A transaction type relayed and mined by default in Bitcoin Core 0.9.0 and later that adds arbitrary data to a provably unspendable pubkey script that full nodes don’t have to store in their UTXO database.
+
+### Synonyms
+
+- Null data transaction
+
+- OP_RETURN transaction
+
+- Data carrier transaction
+
+### Not To Be Confused With
+
+- OP_RETURN (an opcode used in one of the outputs in an OP_RETURN transaction)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-null-data'>Null data transaction</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bitcoin/pull/2738'>Pull request implement null data transactions</a> — GitHub
+
+## OP_RETURN transaction
+<b>Null Data (OP_RETURN) Transaction</b>
+
+### Definition
+
+A transaction type relayed and mined by default in Bitcoin Core 0.9.0 and later that adds arbitrary data to a provably unspendable pubkey script that full nodes don’t have to store in their UTXO database.
+
+### Synonyms
+
+- Null data transaction
+
+- OP_RETURN transaction
+
+- Data carrier transaction
+
+### Not To Be Confused With
+
+- OP_RETURN (an opcode used in one of the outputs in an OP_RETURN transaction)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-null-data'>Null data transaction</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bitcoin/pull/2738'>Pull request implement null data transactions</a> — GitHub
+
+## Opcode
+<b>Opcode</b>
+
+### Definition
+
+Operation codes from the Bitcoin Script language which push data or perform functions within a pubkey script or signature script.
+
+### Synonyms
+
+- Opcode
+
+- Data-pushing opcode
+
+- Non-data-pushing opcode
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#opcodes'>Opcodes</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Script'>List of opcodes</a> — Bitcoin Wiki
+
+## Orphan Block
+<b>Orphan Block</b>
+
+### Definition
+
+Blocks whose parent block has not been processed by the local node, so they can’t be fully validated yet.
+
+### Synonyms
+
+- Orphan block
+
+### Not To Be Confused With
+
+- Stale block
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#orphan-blocks'>Orphan blocks</a> — Bitcoin.org Developer Guide
+
+- <a href='http://bitcoin.stackexchange.com/questions/5859/what-are-orphaned-and-stale-blocks'>What are orphaned and stale blocks?</a> — Bitcoin StackExchange
+
+## Outpoint
+<b>Outpoint</b>
+
+### Definition
+
+The data structure used to refer to a particular transaction output, consisting of a 32-byte TXID and a 4-byte output index number (vout).
+
+### Synonyms
+
+- Outpoint
+
+### Not To Be Confused With
+
+- Output (an entire output from a transaction)
+
+- TxOut (same as output)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#outpoint'>Outpoint</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Protocol_documentation#tx'>Tx message (includes outpoint description)</a> — Bitcoin Wiki
+
+## Output
+<b>Output, Transaction Output, TxOut</b>
+
+### Definition
+
+An output in a transaction which contains two fields: a value field for transferring zero or more satoshis and a pubkey script for indicating what conditions must be fulfilled for those satoshis to be further spent.
+
+### Synonyms
+
+- Output
+
+- TxOut
+
+### Not To Be Confused With
+
+- Outpoint (a reference to a particular output)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-output'>Output</a> — Bitcoin.org Developer Guide
+
+- <a href='https://bitcoin.org/en/developer-reference#raw-transaction-format'>TxOut</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Transaction#Output'>Output</a> — Bitcoin Wiki
+
