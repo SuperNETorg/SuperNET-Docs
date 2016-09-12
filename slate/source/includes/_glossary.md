@@ -1601,7 +1601,7 @@ Mining is the act of creating valid Bitcoin blocks, which requires demonstrating
 - <a href='http://bitcoin.stackexchange.com/questions/148/what-exactly-is-mining'>What exactly is mining?</a> — Bitcoin StackExchange
 
 ## Multisig
-<b> M-of-N Multisig, Multisig Output<M-of-N Multisig, Multisig Output</b>
+<b> M-of-N Multisig, Multisig Output<M-of-N Multisig, Multisig Output </b>
 
 ### Definition
 
@@ -1627,8 +1627,8 @@ A pubkey script that provides n number of pubkeys and requires the corresponding
 
 - <a href='http://bitcoin.stackexchange.com/questions/3718/what-are-multi-signature-transactions'>What are multi-signature transactions?</a> — Bitcoin StackExchange
 
-## nBits
-<b>nBits, Target Threshold</b>
+## NBits
+<b>nBits, Target Threshold </b>
 
 ### Definition
 
@@ -1655,7 +1655,7 @@ The target is the threshold below which a block header hash must be in order for
 - <a href='http://bitcoin.stackexchange.com/questions/23912/how-is-the-target-section-of-a-block-header-calculated'>How is the target section of the block header calculated?</a> — Bitcoin StackExchange
 
 ## Network Difficulty
-<b>Difficulty, Network Difficulty</b>
+<b>Difficulty, Network Difficulty </b>
 
 ### Definition
 
