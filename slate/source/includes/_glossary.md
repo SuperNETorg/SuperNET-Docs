@@ -1684,7 +1684,7 @@ How difficult it is to find a block relative to the difficulty of finding the ea
 
 ### Definition
 
-- Four defined bytes which start every message in the Bitcoin P2P protocol to allow seeking to the next message.
+Four defined bytes which start every message in the Bitcoin P2P protocol to allow seeking to the next message.
 
 ### Synonyms
 
