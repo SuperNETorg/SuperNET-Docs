@@ -1601,7 +1601,7 @@ Mining is the act of creating valid Bitcoin blocks, which requires demonstrating
 - <a href='http://bitcoin.stackexchange.com/questions/148/what-exactly-is-mining'>What exactly is mining?</a> — Bitcoin StackExchange
 
 ## Multisig
-<b>M-of-N Multisig, Multisig Output<M-of-N Multisig, Multisig Output/b>
+<b>M-of-N Multisig, Multisig Output<M-of-N Multisig, Multisig Output</b>
 
 ### Definition
 
