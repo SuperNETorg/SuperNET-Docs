@@ -1601,7 +1601,7 @@ Mining is the act of creating valid Bitcoin blocks, which requires demonstrating
 - <a href='http://bitcoin.stackexchange.com/questions/148/what-exactly-is-mining'>What exactly is mining?</a> — Bitcoin StackExchange
 
 ## Multisig
-<b>M-of-N Multisig, Multisig Output<M-of-N Multisig, Multisig Output</b>
+<b> M-of-N Multisig, Multisig Output<M-of-N Multisig, Multisig Output</b>
 
 ### Definition
 
@@ -1642,7 +1642,7 @@ The target is the threshold below which a block header hash must be in order for
 
 ### Not To Be Confused With
 
-Difficulty (a number measuring the difficulty of finding a header hash relative to the difficulty of finding a header hash with the easiest target)
+- Difficulty (a number measuring the difficulty of finding a header hash relative to the difficulty of finding a header hash with the easiest target)
 
 ### Links
 
