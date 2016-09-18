@@ -551,7 +551,7 @@ A type of variable-length integer commonly used in the Bitcoin P2P protocol and 
 
 - <a href='https://en.bitcoin.it/wiki/Protocol_documentation#Variable_length_integer'>Variable length integers (compactSize)</a> — Bitcoin Wiki
 
-## Compressed Public Keyy
+## Compressed Public Key
 <b>Compressed Public Key</b>
 
 ### Definition
