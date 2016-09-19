@@ -2174,3 +2174,113 @@ In the context of HD wallets, a public key or private key extended with the chai
 
 - <a href='https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki'>BIP32: hierarchical deterministic wallets</a> — Bitcoin Improvement Proposals
 
+## Private Key
+<b>Private Key, ECDSA Private Key</b>
+
+### Definition
+
+The private portion of a keypair which can create signatures that other people can verify using the public key.
+
+### Synonyms
+
+- Private key
+
+### Not To Be Confused With
+
+- Public key (data derived from the private key)
+
+- Parent key (a key used to create child keys, not necessarily a private key)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-private-key'>Private key</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Private_key'>Private key</a> — Bitcoin Wiki
+
+- <a href='http://bitcoin.stackexchange.com/questions/4675/what-is-a-private-key-and-a-public-key'>What is a private key?</a> — Bitcoin StackExchange
+
+## Proof Of Work
+<b>Proof Of Work</b>
+
+### Definition
+
+A hash below a target value which can only be obtained, on average, by performing a certain amount of brute force work—therefore demonstrating proof of work.
+
+### Synonyms
+
+- Proof of work
+
+- POW
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-proof-of-work'>Proof of work</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Proof_of_work'>Proof of work</a> — Bitcoin Wiki
+
+## Pubkey Script
+<b>Pubkey Script, ScriptPubKey</b>
+
+### Definition
+
+A script included in outputs which sets the conditions that must be fulfilled for those satoshis to be spent. Data for fulfilling the conditions can be provided in a signature script. Pubkey Scripts are called a scriptPubKey in code.
+
+### Synonyms
+
+- Pubkey script
+
+- ScriptPubKey
+
+### Not To Be Confused With
+
+- Pubkey (a public key, which can be used as part of a pubkey script but don’t provide a programmable authentication mechanism)
+
+- Signature script (a script that provides data to the pubkey script)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-pubkey-script'>Pubkey script</a> — Bitcoin.org Developer Guide
+
+## Public Extended Key
+<b>Extended Key, HD Wallet Extended Key</b>
+
+### Definition
+
+In the context of HD wallets, a public key or private key extended with the chain code to allow them to derive child keys.
+
+### Synonyms
+
+- Extended key
+
+- Public extended key
+
+- Private extended key
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-extended-key'>Extended key</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki'>BIP32: hierarchical deterministic wallets</a> — Bitcoin Improvement Proposals
+
+## Public Key
+<b>Public Key, ECDSA Public Key</b>
+
+### Definition
+
+The public portion of a keypair which can be used to verify signatures made with the private portion of the keypair.
+
+### Synonyms
+
+- Public key
+
+### Not To Be Confused With
+
+- Private key (data from which the public key is derived)
+
+- Parent key (a key used to create child keys, not necessarily a public key)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-public-key'>Public key</a> — Bitcoin.org Developer Guide
+
+- <a href='http://bitcoin.stackexchange.com/questions/4675/what-is-a-private-key-and-a-public-key'>What is a public key?</a> — Bitcoin StackExchange
