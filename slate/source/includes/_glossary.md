@@ -2284,3 +2284,181 @@ The public portion of a keypair which can be used to verify signatures made with
 - <a href='https://bitcoin.org/en/developer-guide#term-public-key'>Public key</a> — Bitcoin.org Developer Guide
 
 - <a href='http://bitcoin.stackexchange.com/questions/4675/what-is-a-private-key-and-a-public-key'>What is a public key?</a> — Bitcoin StackExchange
+
+## Raw Transaction
+<b>Serialized Transaction, Raw Transaction</b>
+
+### Definition
+
+Complete transactions in their binary format; often represented using hexadecimal. Sometimes called raw format because of the various Bitcoin Core commands with “raw” in their names.
+
+### Synonyms
+
+- Serialized transaction
+
+- Raw transaction
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#term-raw-format'>Serialized transactions</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Protocol_documentation#tx'>Tx message (serialized transaction)</a> — Bitcoin Wiki
+
+- <a href='https://en.bitcoin.it/wiki/Transaction'>Transaction</a> — Bitconi Wiki
+
+## Redeem Script
+<b>Redeem Script, RedeemScript</b>
+
+### Definition
+
+A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions.
+
+### Synonyms
+
+- Redeem script
+
+- RedeemScript
+
+### Not To Be Confused With
+
+- Signature script (a script that provides data to the pubkey script, which includes the redeem script in a P2SH input)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-redeem-script'>Redeem script</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki'>BIP16: pay to script hash</a> — Bitcoin Improvement Proposals
+
+## RedeemScript
+<b>Redeem Script, RedeemScript</b>
+
+### Definition
+
+A script similar in function to a pubkey script. One copy of it is hashed to create a P2SH address (used in an actual pubkey script) and another copy is placed in the spending signature script to enforce its conditions.
+
+### Synonyms
+
+- Redeem script
+
+- RedeemScript
+
+### Not To Be Confused With
+
+- Signature script (a script that provides data to the pubkey script, which includes the redeem script in a P2SH input)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-redeem-script'>Redeem script</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki'>BIP16: pay to script hash</a> — Bitcoin Improvement Proposals
+
+## Regression Test Mode
+<b>Regtest, Regression Test Mode</b>
+
+### Definition
+
+A local testing environment in which developers can almost instantly generate blocks on demand for testing events, and can create private satoshis with no real-world value.
+
+### Synonyms
+
+- Regtest
+
+- Regression test mode
+
+### Not To Be Confused With
+
+- Testnet (a global testing environment which mostly mimics mainnet)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-examples#regtest-mode'>Regtest mode</a> — Bitcoin.org Developer Examples
+
+## Regtest
+<b>Regtest, Regression Test Mode</b>
+
+### Definition
+
+A local testing environment in which developers can almost instantly generate blocks on demand for testing events, and can create private satoshis with no real-world value.
+
+### Synonyms
+
+- Regtest
+
+- Regression test mode
+
+### Not To Be Confused With
+
+- Testnet (a global testing environment which mostly mimics mainnet)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-examples#regtest-mode'>Regtest mode</a> — Bitcoin.org Developer Examples
+
+## Relay Fee
+<b>Minimum Relay Fee</b>
+
+### Definition
+
+The minimum transaction fee a transaction must pay (if it isn’t a high-priority transaction) for a full node to relay that transaction to other nodes. There is no one minimum relay fee—each node chooses its own policy.
+
+### Synonyms
+
+- Minimum relay fee
+
+- Relay fee
+
+### Not To Be Confused With
+
+- Transaction fee (the minimum relay fee is a policy setting that filters out transactions with too-low transaction fees)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#term-minimum-fee'>Minimum relay fee</a> — Bitcoin.org Developer Guide
+
+- <a href='https://en.bitcoin.it/wiki/Transaction_fees'>Transaction fees — Bitcoin Wiki
+
+## Root Seed
+<b>HD Wallet Seed, Root Seed</b>
+
+### Definition
+
+A potentially-short value used as a seed to generate the master private key and master chain code for an HD wallet.
+
+### Synonyms
+
+- HD wallet seed
+
+- Root seed
+
+### Not To Be Confused With
+
+- Mnemonic code / mnemonic seed (a binary root seed formatted as words to make it easier for humans to transcribe and possibly remember)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-guide#hierarchical-deterministic-key-creation'>Root seed</a> — Bitcoin.org Developer Guide
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki'>BIP32: hierarchical deterministic wallets</a> — Bitcoin Improvement Proposals
+
+- <a href='https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki'>BIP39: mnemonic code for generating deterministic keys</a> — Bitcoin Improvement Proposals
+
+## RPC Byte Order
+<b>RPC Byte Order</b>
+
+### Definition
+
+A hash digest displayed with the byte order reversed; used in Bitcoin Core RPCs, many block explorers, and other software.
+
+### Synonyms
+
+- RPC byte order
+
+### Not To Be Confused With
+
+- Internal byte order (hash digests displayed in their typical order; used in serialized blocks and serialized transactions)
+
+### Links
+
+- <a href='https://bitcoin.org/en/developer-reference#hash-byte-order'>RPC byte order</a> — Bitcoin.org Developer Reference
+
+- <a href='https://en.bitcoin.it/wiki/Block_hashing_algorithm'>Block hashing algorithm (‘endian conversion’)</a> — Bitcoin Wiki
