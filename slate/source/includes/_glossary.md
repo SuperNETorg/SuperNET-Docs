@@ -2904,3 +2904,128 @@ Four defined bytes which start every message in the Bitcoin P2P protocol to allo
 - <a href='https://bitcoin.org/en/developer-reference#term-start-string'>Start string</a> — Bitcoin.org Developer Reference
 
 - <a href='http://bitcoin.stackexchange.com/questions/2337/how-was-the-magic-network-id-value-chosen'>How was the start string chosen?</a> — Bitcoin StackExchange
+
+## Target
+<b>nBits, Target Threshold</b>
+
+### Definition
+
+The target is the threshold below which a block header hash must be in order for the block to valid, and nBits is the encoded form of the target threshold as it appears in the block header.
+
+### Synonyms
+
+- nBits
+
+- Target
+
+### Not To Be Confused With
+
+- Difficulty (a number measuring the difficulty of finding a header hash relative to the difficulty of finding a header hash with the easiest target)
+
+### Links
+
+- <a href=''>Target</a> — Bitcoin.org Developer Guide
+
+- <a href=''>nBits</a> — Bitcoin.org Developer Reference
+
+- <a href=''>Target</a> — Bitcoin Wiki
+
+- <a href=''>How is the target section of the block header calculated?</a> — Bitcoin StackExchange
+
+## Testnet
+<b>Testnet, Testing Network</b>
+
+### Definition
+
+A global testing environment in which developers can obtain and spend satoshis that have no real-world value on a network that is very similar to the Bitcoin mainnet.
+
+### Synonyms
+
+- Testnet
+
+### Not To Be Confused With
+
+- Regtest (a local testing environment where developers can control block generation)
+
+### Links
+
+- <a href=''>Testnet mode</a> — Bitcoin.org Developer Examples
+
+- <a href=''>Testnet</a> — Bitcoin Wiki
+
+- <a href=''>Get testnet bitcoins</a> — Testnet Faucet
+
+## Thin Client
+<b>SPV, Simplified Payment Verification</b>
+
+### Definition
+
+A method for verifying particular transactions were included in a block without downloading the entire block. The method is used by some lightweight Bitcoin clients.
+
+### Synonyms
+
+- SPV
+
+- Simplified Payment Verification
+
+- Lightweight client
+
+- Thin client
+
+### Links
+
+- <a href=''>SPV</a> — Bitcoin.org Developer Guide
+
+- <a href=''>Thin client security</a> — Bitcoin Wiki
+
+- <a href=''>What is a thin client?</a> — Bitcoin StackExchange
+
+## Transaction Fee
+<b>Transaction Fee, Miner Fee</b>
+
+### Definition
+
+The amount remaining when the value of all outputs in a transaction are subtracted from all inputs in a transaction; the fee is paid to the miner who includes that transaction in a block.
+
+### Synonyms
+
+- Transaction fee
+
+- Miners fee
+
+### Not To Be Confused With
+
+- Minimum relay fee (the lowest fee a transaction must pay to be accepted into the memory pool and relayed by Bitcoin Core nodes)
+
+### Links
+
+- <a href=''>Transaction fee</a> — Bitcoin.org Developer Guide
+
+- <a href=''>Transaction fees</a> — Bitcoin Wiki
+
+- <a href=''>How to calculate transaction fees before sending?</a> — Bitcoin StackExchange
+
+##
+<b></b>
+
+### Definition
+
+The ability of someone to change (mutate) unconfirmed transactions without making them invalid, which changes the transaction’s txid, making child transactions invalid.
+
+### Synonyms
+
+- Transaction malleability
+
+- Transaction mutability
+
+### Not To Be Confused With
+
+- BIP62 (a proposal for an optional new transaction version that reduces the set of known mutations for common transactions)
+
+### Links
+
+- <a href=''>Transaction malleability</a> — Bitcoin.org Developer Guide
+
+- <a href=''>Transaction malleability</a> — Bitcoin Wiki
+
+- <a href=''>BIP62: dealing with malleability</a> — Bitcoin Improvement Proposals
