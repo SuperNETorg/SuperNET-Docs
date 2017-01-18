@@ -10,7 +10,7 @@ toc_footers:
   - <a href='https://phabricator.supernet.org/'>SupernET Developer Network</a>
 
 includes:
-  - API
+  - autoAPI
   - errors
   - glossary
 
