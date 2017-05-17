@@ -133,7 +133,7 @@
 
 <h2 id="method-pending">method: pending</h2>
 
-<p>put helpful info here</p>
+<p>dpow pending displays the pending pax withdraws</p>
 
 <blockquote>
 <p>Shell command format:</p>
@@ -157,13 +157,13 @@
 <tr>
 <td>fiat</td>
 <td>string</td>
-<td>no help info</td>
+<td>USD, JPY, EUR</td>
 </tr>
 </tbody></table>
 
 <h2 id="method-notarychains">method: notarychains</h2>
 
-<p>put helpful info here</p>
+<p>Displays the notarychains</p>
 
 <blockquote>
 <p>Shell command format:</p>
@@ -188,7 +188,7 @@
 
 <h2 id="method-active">method: active</h2>
 
-<p>put helpful info here</p>
+<p>That method has been depreciated!</p>
 
 <blockquote>
 <p>Shell command format:</p>
@@ -218,7 +218,7 @@
 
 <h2 id="method-ratify">method: ratify</h2>
 
-<p>put helpful info here</p>
+<p>That method has been depreciated!</p>
 
 <blockquote>
 <p>Shell command format:</p>
@@ -258,7 +258,7 @@
 
 <h2 id="method-cancelratify">method: cancelratify</h2>
 
-<p>put helpful info here</p>
+<p>That method has been depreciated!</p>
 
 <blockquote>
 <p>Shell command format:</p>
@@ -283,7 +283,7 @@
 
 <h2 id="method-bindaddr">method: bindaddr</h2>
 
-<p>put helpful info here</p>
+<p>That method has been depreciated!</p>
 
 <blockquote>
 <p>Shell command format:</p>
@@ -313,7 +313,7 @@
 
 <h2 id="method-fundnotaries">method: fundnotaries</h2>
 
-<p>put helpful info here</p>
+<p>Fundnotaries api call is used to fund notaries</p>
 
 <blockquote>
 <p>Shell command format:</p>
@@ -337,13 +337,42 @@
 <tr>
 <td>symbol</td>
 <td>string</td>
-<td>no help info</td>
+<td>Notarychain</td>
 </tr>
 <tr>
 <td>numblocks</td>
 <td>int</td>
-<td>no help info</td>
+<td>Number of blocks to scan for a notary&rsquo;s notarizations</td>
 </tr>
+</tbody></table>
+
+<h1 id="pax-api">pax API</h1>
+
+<p>need to create help/pax.md file</p>
+
+<h2 id="method-start">method: start</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">pax</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">start</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/pax/start
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
 </tbody></table>
 
 <h1 id="passthru-api">passthru API</h1>
@@ -357,13 +386,13 @@
 <blockquote>
 <p>Shell command format:</p>
 </blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">passthru</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">paxfiats</span><span class="se">\"</span><span class="s2">}"</span>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">passthru</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">paxfiats</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">mask</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">}"</span>
 </code></pre>
 
 <blockquote>
 <p>HTTP API call format:</p>
 </blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/passthru/paxfiats
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/passthru/paxfiats?mask={int}
 </code></pre>
 
 <table><thead>
@@ -373,11 +402,184 @@
 <th>Description</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>mask</td>
+<td>int</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
+<h1 id="zcash-api">zcash API</h1>
+
+<p>need to create help/zcash.md file</p>
+
+<h2 id="method-passthru">method: passthru</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">zcash</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">passthru</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">function</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">hex</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/zcash/passthru?function={string}&amp;hex={string}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>function</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>hex</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
+<h1 id="komodo-api">komodo API</h1>
+
+<p>need to create help/komodo.md file</p>
+
+<h2 id="method-passthru">method: passthru</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">komodo</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">passthru</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">function</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">hex</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/komodo/passthru?function={string}&amp;hex={string}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>function</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>hex</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
 </tbody></table>
 
 <h1 id="dex-api">dex API</h1>
 
 <p>need to create help/dex.md file</p>
+
+<h2 id="method-kvsearch">method: kvsearch</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">dex</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">kvsearch</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">symbol</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">key</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/dex/kvsearch?symbol={string}&amp;key={string}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
+<h2 id="method-kvupdate">method: kvupdate</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">dex</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">kvupdate</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">symbol</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">key</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">value</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">flags</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">unused</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">unusedb</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/dex/kvupdate?symbol={string}&amp;key={string}&amp;value={string}&amp;flags={int}&amp;unused={int}&amp;unusedb={int}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>value</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>flags</td>
+<td>int</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>unused</td>
+<td>int</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>unusedb</td>
+<td>int</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
 
 <h2 id="method-send">method: send</h2>
 
@@ -784,6 +986,41 @@
 </tr>
 </tbody></table>
 
+<h2 id="method-checkaddress">method: checkaddress</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">dex</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">checkaddress</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">symbol</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">address</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/dex/checkaddress?symbol={string}&amp;address={string}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
 <h2 id="method-listunspent">method: listunspent</h2>
 
 <p>put helpful info here</p>
@@ -864,24 +1101,20 @@
 </tr>
 </tbody></table>
 
-<h1 id="zcash-api">zcash API</h1>
-
-<p>need to create help/zcash.md file</p>
-
-<h2 id="method-passthru">method: passthru</h2>
+<h2 id="method-listunspent2">method: listunspent2</h2>
 
 <p>put helpful info here</p>
 
 <blockquote>
 <p>Shell command format:</p>
 </blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">zcash</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">passthru</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">function</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">hex</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">dex</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">listunspent2</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">symbol</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">address</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
 </code></pre>
 
 <blockquote>
 <p>HTTP API call format:</p>
 </blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/zcash/passthru?function={string}&amp;hex={string}
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/dex/listunspent2?symbol={string}&amp;address={string}
 </code></pre>
 
 <table><thead>
@@ -892,35 +1125,31 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>function</td>
+<td>symbol</td>
 <td>string</td>
 <td>no help info</td>
 </tr>
 <tr>
-<td>hex</td>
+<td>address</td>
 <td>string</td>
 <td>no help info</td>
 </tr>
 </tbody></table>
 
-<h1 id="komodo-api">komodo API</h1>
-
-<p>need to create help/komodo.md file</p>
-
-<h2 id="method-passthru">method: passthru</h2>
+<h2 id="method-listtransactions2">method: listtransactions2</h2>
 
 <p>put helpful info here</p>
 
 <blockquote>
 <p>Shell command format:</p>
 </blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">komodo</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">passthru</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">function</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">hex</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">dex</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">listtransactions2</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">symbol</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">address</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">count</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{float}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">skip</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{float}</span><span class="se">\"</span><span class="s2">}"</span>
 </code></pre>
 
 <blockquote>
 <p>HTTP API call format:</p>
 </blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/komodo/passthru?function={string}&amp;hex={string}
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/dex/listtransactions2?symbol={string}&amp;address={string}&amp;count={float}&amp;skip={float}
 </code></pre>
 
 <table><thead>
@@ -931,64 +1160,41 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>function</td>
+<td>symbol</td>
 <td>string</td>
 <td>no help info</td>
 </tr>
 <tr>
-<td>hex</td>
+<td>address</td>
 <td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>count</td>
+<td>float</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>skip</td>
+<td>float</td>
 <td>no help info</td>
 </tr>
 </tbody></table>
 
-<h1 id="pax-api">pax API</h1>
-
-<p>need to create help/pax.md file</p>
-
-<h2 id="method-start">method: start</h2>
+<h2 id="method-gettxin">method: gettxin</h2>
 
 <p>put helpful info here</p>
 
 <blockquote>
 <p>Shell command format:</p>
 </blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">pax</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">start</span><span class="se">\"</span><span class="s2">}"</span>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">dex</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">gettxin</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">txid</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{hash}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">symbol</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{str}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">vout</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">}"</span>
 </code></pre>
 
 <blockquote>
 <p>HTTP API call format:</p>
 </blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/pax/start
-</code></pre>
-
-<table><thead>
-<tr>
-<th>field</th>
-<th>value type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-</tbody></table>
-
-<h1 id="tradebot-api">tradebot API</h1>
-
-<p>need to create help/tradebot.md file</p>
-
-<h2 id="method-liquidity">method: liquidity</h2>
-
-<p>put helpful info here</p>
-
-<blockquote>
-<p>Shell command format:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">tradebot</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">liquidity</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">hash</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{hash}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">vals</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{array}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">targetcoin</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{str}</span><span class="se">\"</span><span class="s2">}"</span>
-</code></pre>
-
-<blockquote>
-<p>HTTP API call format:</p>
-</blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/tradebot/liquidity?hash={hash}&amp;vals={array}&amp;targetcoin={str}
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/dex/gettxin?txid={hash}&amp;symbol={str}&amp;vout={int}
 </code></pre>
 
 <table><thead>
@@ -999,86 +1205,36 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>hash</td>
+<td>txid</td>
 <td>hash</td>
 <td>no help info</td>
 </tr>
 <tr>
-<td>vals</td>
-<td>array</td>
-<td>no help info</td>
-</tr>
-<tr>
-<td>targetcoin</td>
+<td>symbol</td>
 <td>str</td>
 <td>no help info</td>
 </tr>
-</tbody></table>
-
-<h2 id="method-amlp">method: amlp</h2>
-
-<p>put helpful info here</p>
-
-<blockquote>
-<p>Shell command format:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">tradebot</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">amlp</span><span class="se">\"</span><span class="s2">}"</span>
-</code></pre>
-
-<blockquote>
-<p>HTTP API call format:</p>
-</blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/tradebot/amlp
-</code></pre>
-
-<table><thead>
 <tr>
-<th>field</th>
-<th>value type</th>
-<th>Description</th>
+<td>vout</td>
+<td>int</td>
+<td>no help info</td>
 </tr>
-</thead><tbody>
 </tbody></table>
 
-<h2 id="method-notlp">method: notlp</h2>
+<h2 id="method-listspent">method: listspent</h2>
 
 <p>put helpful info here</p>
 
 <blockquote>
 <p>Shell command format:</p>
 </blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">tradebot</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">notlp</span><span class="se">\"</span><span class="s2">}"</span>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">dex</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">listspent</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">symbol</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">address</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
 </code></pre>
 
 <blockquote>
 <p>HTTP API call format:</p>
 </blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/tradebot/notlp
-</code></pre>
-
-<table><thead>
-<tr>
-<th>field</th>
-<th>value type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-</tbody></table>
-
-<h2 id="method-gensvm">method: gensvm</h2>
-
-<p>put helpful info here</p>
-
-<blockquote>
-<p>Shell command format:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">tradebot</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">gensvm</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">rel</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
-</code></pre>
-
-<blockquote>
-<p>HTTP API call format:</p>
-</blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/tradebot/gensvm?base={string}&amp;rel={string}
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/dex/listspent?symbol={string}&amp;address={string}
 </code></pre>
 
 <table><thead>
@@ -1089,85 +1245,31 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>base</td>
+<td>symbol</td>
 <td>string</td>
 <td>no help info</td>
 </tr>
 <tr>
-<td>rel</td>
+<td>address</td>
 <td>string</td>
 <td>no help info</td>
 </tr>
 </tbody></table>
 
-<h2 id="method-openliquidity">method: openliquidity</h2>
+<h2 id="method-getbalance">method: getbalance</h2>
 
 <p>put helpful info here</p>
 
 <blockquote>
 <p>Shell command format:</p>
 </blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">tradebot</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">openliquidity</span><span class="se">\"</span><span class="s2">}"</span>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">dex</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">getbalance</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">symbol</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">address</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
 </code></pre>
 
 <blockquote>
 <p>HTTP API call format:</p>
 </blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/tradebot/openliquidity
-</code></pre>
-
-<table><thead>
-<tr>
-<th>field</th>
-<th>value type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-</tbody></table>
-
-<h1 id="instantdex-api">InstantDEX API</h1>
-
-<p>need to create help/InstantDEX.md file</p>
-
-<h2 id="method-allcoins">method: allcoins</h2>
-
-<p>put helpful info here</p>
-
-<blockquote>
-<p>Shell command format:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">allcoins</span><span class="se">\"</span><span class="s2">}"</span>
-</code></pre>
-
-<blockquote>
-<p>HTTP API call format:</p>
-</blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/allcoins
-</code></pre>
-
-<table><thead>
-<tr>
-<th>field</th>
-<th>value type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-</tbody></table>
-
-<h2 id="method-available">method: available</h2>
-
-<p>put helpful info here</p>
-
-<blockquote>
-<p>Shell command format:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">available</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">source</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
-</code></pre>
-
-<blockquote>
-<p>HTTP API call format:</p>
-</blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/available?source={string}
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/dex/getbalance?symbol={string}&amp;address={string}
 </code></pre>
 
 <table><thead>
@@ -1178,26 +1280,31 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>source</td>
+<td>symbol</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>address</td>
 <td>string</td>
 <td>no help info</td>
 </tr>
 </tbody></table>
 
-<h2 id="method-request">method: request</h2>
+<h2 id="method-explorer">method: explorer</h2>
 
 <p>put helpful info here</p>
 
 <blockquote>
 <p>Shell command format:</p>
 </blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">request</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">hash</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{hash}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">vals</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{array}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">hexstr</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{str}</span><span class="se">\"</span><span class="s2">}"</span>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">dex</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">explorer</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">symbol</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
 </code></pre>
 
 <blockquote>
 <p>HTTP API call format:</p>
 </blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/request?hash={hash}&amp;vals={array}&amp;hexstr={str}
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/dex/explorer?symbol={string}
 </code></pre>
 
 <table><thead>
@@ -1208,36 +1315,26 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>hash</td>
-<td>hash</td>
-<td>no help info</td>
-</tr>
-<tr>
-<td>vals</td>
-<td>array</td>
-<td>no help info</td>
-</tr>
-<tr>
-<td>hexstr</td>
-<td>str</td>
+<td>symbol</td>
+<td>string</td>
 <td>no help info</td>
 </tr>
 </tbody></table>
 
-<h2 id="method-incoming">method: incoming</h2>
+<h2 id="method-getmessage">method: getmessage</h2>
 
 <p>put helpful info here</p>
 
 <blockquote>
 <p>Shell command format:</p>
 </blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">incoming</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">requestid</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">}"</span>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">dex</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">getmessage</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">argstr</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
 </code></pre>
 
 <blockquote>
 <p>HTTP API call format:</p>
 </blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/incoming?requestid={int}
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/dex/getmessage?argstr={string}
 </code></pre>
 
 <table><thead>
@@ -1248,26 +1345,26 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>requestid</td>
-<td>int</td>
+<td>argstr</td>
+<td>string</td>
 <td>no help info</td>
 </tr>
 </tbody></table>
 
-<h2 id="method-automatched">method: automatched</h2>
+<h2 id="method-psock">method: psock</h2>
 
 <p>put helpful info here</p>
 
 <blockquote>
 <p>Shell command format:</p>
 </blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">automatched</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">requestid</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">}"</span>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">dex</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">psock</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">argstr</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
 </code></pre>
 
 <blockquote>
 <p>HTTP API call format:</p>
 </blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/automatched?requestid={int}
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/dex/psock?argstr={string}
 </code></pre>
 
 <table><thead>
@@ -1278,43 +1375,8 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>requestid</td>
-<td>int</td>
-<td>no help info</td>
-</tr>
-</tbody></table>
-
-<h2 id="method-accept">method: accept</h2>
-
-<p>put helpful info here</p>
-
-<blockquote>
-<p>Shell command format:</p>
-</blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">accept</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">requestid</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">quoteid</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">}"</span>
-</code></pre>
-
-<blockquote>
-<p>HTTP API call format:</p>
-</blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/accept?requestid={int}&amp;quoteid={int}
-</code></pre>
-
-<table><thead>
-<tr>
-<th>field</th>
-<th>value type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>requestid</td>
-<td>int</td>
-<td>no help info</td>
-</tr>
-<tr>
-<td>quoteid</td>
-<td>int</td>
+<td>argstr</td>
+<td>string</td>
 <td>no help info</td>
 </tr>
 </tbody></table>
@@ -1410,13 +1472,13 @@
 <blockquote>
 <p>Shell command format:</p>
 </blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">basilisk</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">paxfiats</span><span class="se">\"</span><span class="s2">}"</span>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">basilisk</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">paxfiats</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">mask</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">}"</span>
 </code></pre>
 
 <blockquote>
 <p>HTTP API call format:</p>
 </blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/basilisk/paxfiats
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/basilisk/paxfiats?mask={int}
 </code></pre>
 
 <table><thead>
@@ -1426,6 +1488,11 @@
 <th>Description</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>mask</td>
+<td>int</td>
+<td>no help info</td>
+</tr>
 </tbody></table>
 
 <h2 id="method-balances">method: balances</h2>
@@ -1543,6 +1610,151 @@
 </tr>
 <tr>
 <td>hexstr</td>
+<td>str</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
+<h2 id="method-refresh">method: refresh</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">basilisk</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">refresh</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">symbol</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">address</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/basilisk/refresh?symbol={string}&amp;address={string}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
+<h2 id="method-cancelrefresh">method: cancelrefresh</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">basilisk</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">cancelrefresh</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/basilisk/cancelrefresh
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<h2 id="method-utxorawtx">method: utxorawtx</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">basilisk</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">utxorawtx</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">symbol</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">utxos</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{array}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">vals</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{object}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">ignore</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/basilisk/utxorawtx?symbol={string}&amp;utxos={array}&amp;vals={object}&amp;ignore={string}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>utxos</td>
+<td>array</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>vals</td>
+<td>object</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>ignore</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
+<h2 id="method-utxocombine">method: utxocombine</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">basilisk</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">utxocombine</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">ignore</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{hash}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">vals</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{array}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">symbol</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{str}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/basilisk/utxocombine?ignore={hash}&amp;vals={array}&amp;symbol={str}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ignore</td>
+<td>hash</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>vals</td>
+<td>array</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>symbol</td>
 <td>str</td>
 <td>no help info</td>
 </tr>
@@ -2990,6 +3202,46 @@
 <td>rescan</td>
 <td>int</td>
 <td>Set to 1 (the default) to rescan the entire local block database for transactions affecting any address or pubkey script in the wallet (including transaction affecting the newly-added address for this private key). Set to 0 to not rescan the block database (rescanning can be performed at any time by restarting Bitcoin Core with the -rescan command-line argument). Rescanning may take several minutes. Notes: if the address for this key is already in the wallet, the block database will not be rescanned even if this parameter is set.</td>
+</tr>
+</tbody></table>
+
+<h2 id="method-importaddress">method: importaddress</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">bitcoinrpc</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">importaddress</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">address</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">account</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">rescan</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/bitcoinrpc/importaddress?address={string}&amp;account={string}&amp;rescan={int}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>account</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>rescan</td>
+<td>int</td>
+<td>no help info</td>
 </tr>
 </tbody></table>
 
@@ -5472,9 +5724,278 @@
 </tr>
 </tbody></table>
 
+<h1 id="jumblr-api">jumblr API</h1>
+
+<p>need to create help/jumblr.md file</p>
+
+<h2 id="method-status">method: status</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">jumblr</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">status</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/jumblr/status
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<h2 id="method-runsilent">method: runsilent</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">jumblr</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">runsilent</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/jumblr/runsilent
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<h2 id="method-totransparent">method: totransparent</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">jumblr</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">totransparent</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/jumblr/totransparent
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
 <h1 id="instantdex-api">InstantDEX API</h1>
 
 <p>need to create help/InstantDEX.md file</p>
+
+<h2 id="method-allcoins">method: allcoins</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">allcoins</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/allcoins
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<h2 id="method-available">method: available</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">available</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">source</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/available?source={string}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>source</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
+<h2 id="method-request">method: request</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">request</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">hash</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{hash}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">vals</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{array}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">hexstr</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{str}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/request?hash={hash}&amp;vals={array}&amp;hexstr={str}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>hash</td>
+<td>hash</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>vals</td>
+<td>array</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>hexstr</td>
+<td>str</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
+<h2 id="method-incoming">method: incoming</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">incoming</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">requestid</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/incoming?requestid={int}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>requestid</td>
+<td>int</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
+<h2 id="method-automatched">method: automatched</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">automatched</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">requestid</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/automatched?requestid={int}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>requestid</td>
+<td>int</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
+<h2 id="method-accept">method: accept</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">accept</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">requestid</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">quoteid</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/accept?requestid={int}&amp;quoteid={int}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>requestid</td>
+<td>int</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>quoteid</td>
+<td>int</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
 
 <h2 id="method-buy">method: buy</h2>
 
@@ -6061,9 +6582,314 @@
 </tr>
 </tbody></table>
 
+<h2 id="method-init">method: init</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">init</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/init
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<h2 id="method-getswaplist">method: getswaplist</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">getswaplist</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/getswaplist
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<h2 id="method-smartaddresses">method: smartaddresses</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">smartaddresses</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/smartaddresses
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<h2 id="method-smartaddress">method: smartaddress</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">smartaddress</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">type</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">symbol</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">maxbid</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{float}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">minask</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{float}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/smartaddress?type={string}&amp;symbol={string}&amp;maxbid={float}&amp;minask={float}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>maxbid</td>
+<td>float</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>minask</td>
+<td>float</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
+<h2 id="method-dexratio">method: DEXratio</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">InstantDEX</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">DEXratio</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">ratio</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{float}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/InstantDEX/DEXratio?ratio={float}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ratio</td>
+<td>float</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
 <h1 id="tradebot-api">tradebot API</h1>
 
 <p>need to create help/tradebot.md file</p>
+
+<h2 id="method-liquidity">method: liquidity</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">tradebot</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">liquidity</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">hash</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{hash}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">vals</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{array}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">targetcoin</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{str}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/tradebot/liquidity?hash={hash}&amp;vals={array}&amp;targetcoin={str}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>hash</td>
+<td>hash</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>vals</td>
+<td>array</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>targetcoin</td>
+<td>str</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
+<h2 id="method-amlp">method: amlp</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">tradebot</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">amlp</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">blocktrail</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/tradebot/amlp?blocktrail={string}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>blocktrail</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
+<h2 id="method-notlp">method: notlp</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">tradebot</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">notlp</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/tradebot/notlp
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<h2 id="method-gensvm">method: gensvm</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">tradebot</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">gensvm</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">base</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">rel</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/tradebot/gensvm?base={string}&amp;rel={string}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>base</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>rel</td>
+<td>string</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
+<h2 id="method-openliquidity">method: openliquidity</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">tradebot</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">openliquidity</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/tradebot/openliquidity
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
 
 <h2 id="method-aveprice">method: aveprice</h2>
 
@@ -6506,6 +7332,121 @@
 <tr>
 <td>botid</td>
 <td>string</td>
+<td>no help info</td>
+</tr>
+</tbody></table>
+
+<h2 id="method-allbalances">method: allbalances</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">tradebot</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">allbalances</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/tradebot/allbalances
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<h2 id="method-anchor">method: anchor</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">tradebot</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">anchor</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/tradebot/anchor
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<h2 id="method-portfolio">method: portfolio</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">tradebot</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">portfolio</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/tradebot/portfolio
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<h2 id="method-goals">method: goals</h2>
+
+<p>put helpful info here</p>
+
+<blockquote>
+<p>Shell command format:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">tradebot</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">goals</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">currencies</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{array}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">vals</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{object}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">targettime</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">}"</span>
+</code></pre>
+
+<blockquote>
+<p>HTTP API call format:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/tradebot/goals?currencies={array}&amp;vals={object}&amp;targettime={int}
+</code></pre>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>value type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>currencies</td>
+<td>array</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>vals</td>
+<td>object</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>targettime</td>
+<td>int</td>
 <td>no help info</td>
 </tr>
 </tbody></table>
@@ -7196,13 +8137,13 @@
 <blockquote>
 <p>Shell command format:</p>
 </blockquote>
-<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">SuperNET</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">priv2wif</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">priv</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">}"</span>
+<pre class="highlight shell"><code>curl --url <span class="s2">"http://127.0.0.1:7778"</span> --data <span class="s2">"{</span><span class="se">\"</span><span class="s2">agent</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">SuperNET</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">method</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">priv2wif</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">priv</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{string}</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">wiftype</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">{int}</span><span class="se">\"</span><span class="s2">}"</span>
 </code></pre>
 
 <blockquote>
 <p>HTTP API call format:</p>
 </blockquote>
-<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/SuperNET/priv2wif?priv={string}
+<pre class="highlight plaintext"><code>http://127.0.0.1:7778/api/SuperNET/priv2wif?priv={string}&amp;wiftype={int}
 </code></pre>
 
 <table><thead>
@@ -7215,6 +8156,11 @@
 <tr>
 <td>priv</td>
 <td>string</td>
+<td>no help info</td>
+</tr>
+<tr>
+<td>wiftype</td>
+<td>int</td>
 <td>no help info</td>
 </tr>
 </tbody></table>

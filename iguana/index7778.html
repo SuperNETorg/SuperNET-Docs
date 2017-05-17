@@ -312,6 +312,40 @@
 </div>
 
 <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-pax-start">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-pax-start" aria-expanded="false" aria-controls="collapse-pax-start">
+                pax start
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-pax-start" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-pax-start">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/pax/start" oninput="">
+                <div class="row">
+                    <div class="col-md-6">
+  
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="" disabled="">
+                                <pre>
+                                    <code id="code-start" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="start" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
     <div class="panel-heading" role="tab" id="heading-passthru-paxfiats">
         <h4 class="panel-title">
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-passthru-paxfiats" aria-expanded="false" aria-controls="collapse-passthru-paxfiats">
@@ -322,15 +356,18 @@
     <div id="collapse-passthru-paxfiats" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-passthru-paxfiats">
         <div class="panel-body">
             
-            <form action="http://127.0.0.1:7778/api/passthru/paxfiats" oninput="">
+            <form action="http://127.0.0.1:7778/api/passthru/paxfiats" oninput="mask">
                 <div class="row">
                     <div class="col-md-6">
-  
+  <div class="form-group">
+    <label for="mask">mask</label>
+    <textarea class="form-control" name="mask" rows="1" cols="12" mask></textarea>
+</div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="broadcast">Response</label>
-                            <figure class="highlight" for="" disabled="">
+                            <figure class="highlight" for="mask" disabled="">
                                 <pre>
                                     <code id="code-paxfiats" class="language-html" data-lang="javascript"></code>
                                 </pre>
@@ -339,6 +376,178 @@
                     </div>
                 </div>
                 <input type="submit" value="paxfiats" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-zcash-passthru">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-zcash-passthru" aria-expanded="false" aria-controls="collapse-zcash-passthru">
+                zcash passthru
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-zcash-passthru" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-zcash-passthru">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/zcash/passthru" oninput="function+hex">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="function">function</label>
+    <textarea class="form-control" name="function" rows="1" cols="44" function></textarea>
+</div><div class="form-group">
+    <label for="hex">hex</label>
+    <textarea class="form-control" name="hex" rows="1" cols="44" hex></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="function hex" disabled="">
+                                <pre>
+                                    <code id="code-passthru" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="passthru" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-komodo-passthru">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-komodo-passthru" aria-expanded="false" aria-controls="collapse-komodo-passthru">
+                komodo passthru
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-komodo-passthru" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-komodo-passthru">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/komodo/passthru" oninput="function+hex">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="function">function</label>
+    <textarea class="form-control" name="function" rows="1" cols="44" function></textarea>
+</div><div class="form-group">
+    <label for="hex">hex</label>
+    <textarea class="form-control" name="hex" rows="1" cols="44" hex></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="function hex" disabled="">
+                                <pre>
+                                    <code id="code-passthru" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="passthru" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-dex-kvsearch">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-dex-kvsearch" aria-expanded="false" aria-controls="collapse-dex-kvsearch">
+                dex kvsearch
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-dex-kvsearch" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-dex-kvsearch">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/dex/kvsearch" oninput="symbol+key">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="symbol">symbol</label>
+    <textarea class="form-control" name="symbol" rows="1" cols="44" symbol></textarea>
+</div><div class="form-group">
+    <label for="key">key</label>
+    <textarea class="form-control" name="key" rows="1" cols="44" key></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="symbol key" disabled="">
+                                <pre>
+                                    <code id="code-kvsearch" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="kvsearch" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-dex-kvupdate">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-dex-kvupdate" aria-expanded="false" aria-controls="collapse-dex-kvupdate">
+                dex kvupdate
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-dex-kvupdate" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-dex-kvupdate">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/dex/kvupdate" oninput="symbol+key+value+flags+unused+unusedb">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="symbol">symbol</label>
+    <textarea class="form-control" name="symbol" rows="1" cols="44" symbol></textarea>
+</div><div class="form-group">
+    <label for="key">key</label>
+    <textarea class="form-control" name="key" rows="1" cols="44" key></textarea>
+</div><div class="form-group">
+    <label for="value">value</label>
+    <textarea class="form-control" name="value" rows="1" cols="44" value></textarea>
+</div><div class="form-group">
+    <label for="flags">flags</label>
+    <textarea class="form-control" name="flags" rows="1" cols="12" flags></textarea>
+</div><div class="form-group">
+    <label for="unused">unused</label>
+    <textarea class="form-control" name="unused" rows="1" cols="12" unused></textarea>
+</div><div class="form-group">
+    <label for="unusedb">unusedb</label>
+    <textarea class="form-control" name="unusedb" rows="1" cols="12" unusedb></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="symbol key value flags unused unusedb" disabled="">
+                                <pre>
+                                    <code id="code-kvupdate" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="kvupdate" class="btn btn-default">
                     </form>
             
         </div>
@@ -817,6 +1026,46 @@
 </div>
 
 <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-dex-checkaddress">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-dex-checkaddress" aria-expanded="false" aria-controls="collapse-dex-checkaddress">
+                dex checkaddress
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-dex-checkaddress" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-dex-checkaddress">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/dex/checkaddress" oninput="symbol+address">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="symbol">symbol</label>
+    <textarea class="form-control" name="symbol" rows="1" cols="44" symbol></textarea>
+</div><div class="form-group">
+    <label for="address">address</label>
+    <textarea class="form-control" name="address" rows="1" cols="44" address></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="symbol address" disabled="">
+                                <pre>
+                                    <code id="code-checkaddress" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="checkaddress" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
     <div class="panel-heading" role="tab" id="heading-dex-listunspent">
         <h4 class="panel-title">
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-dex-listunspent" aria-expanded="false" aria-controls="collapse-dex-listunspent">
@@ -903,39 +1152,39 @@
 </div>
 
 <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading-zcash-passthru">
+    <div class="panel-heading" role="tab" id="heading-dex-listunspent2">
         <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-zcash-passthru" aria-expanded="false" aria-controls="collapse-zcash-passthru">
-                zcash passthru
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-dex-listunspent2" aria-expanded="false" aria-controls="collapse-dex-listunspent2">
+                dex listunspent2
             </a>
         </h4>
     </div>
-    <div id="collapse-zcash-passthru" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-zcash-passthru">
+    <div id="collapse-dex-listunspent2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-dex-listunspent2">
         <div class="panel-body">
             
-            <form action="http://127.0.0.1:7778/api/zcash/passthru" oninput="function+hex">
+            <form action="http://127.0.0.1:7778/api/dex/listunspent2" oninput="symbol+address">
                 <div class="row">
                     <div class="col-md-6">
   <div class="form-group">
-    <label for="function">function</label>
-    <textarea class="form-control" name="function" rows="1" cols="44" function></textarea>
+    <label for="symbol">symbol</label>
+    <textarea class="form-control" name="symbol" rows="1" cols="44" symbol></textarea>
 </div><div class="form-group">
-    <label for="hex">hex</label>
-    <textarea class="form-control" name="hex" rows="1" cols="44" hex></textarea>
+    <label for="address">address</label>
+    <textarea class="form-control" name="address" rows="1" cols="44" address></textarea>
 </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="broadcast">Response</label>
-                            <figure class="highlight" for="function hex" disabled="">
+                            <figure class="highlight" for="symbol address" disabled="">
                                 <pre>
-                                    <code id="code-passthru" class="language-html" data-lang="javascript"></code>
+                                    <code id="code-listunspent2" class="language-html" data-lang="javascript"></code>
                                 </pre>
                             </figure>
                         </div>
                     </div>
                 </div>
-                <input type="submit" value="passthru" class="btn btn-default">
+                <input type="submit" value="listunspent2" class="btn btn-default">
                     </form>
             
         </div>
@@ -943,116 +1192,45 @@
 </div>
 
 <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading-komodo-passthru">
+    <div class="panel-heading" role="tab" id="heading-dex-listtransactions2">
         <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-komodo-passthru" aria-expanded="false" aria-controls="collapse-komodo-passthru">
-                komodo passthru
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-dex-listtransactions2" aria-expanded="false" aria-controls="collapse-dex-listtransactions2">
+                dex listtransactions2
             </a>
         </h4>
     </div>
-    <div id="collapse-komodo-passthru" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-komodo-passthru">
+    <div id="collapse-dex-listtransactions2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-dex-listtransactions2">
         <div class="panel-body">
             
-            <form action="http://127.0.0.1:7778/api/komodo/passthru" oninput="function+hex">
+            <form action="http://127.0.0.1:7778/api/dex/listtransactions2" oninput="symbol+address+count+skip">
                 <div class="row">
                     <div class="col-md-6">
   <div class="form-group">
-    <label for="function">function</label>
-    <textarea class="form-control" name="function" rows="1" cols="44" function></textarea>
+    <label for="symbol">symbol</label>
+    <textarea class="form-control" name="symbol" rows="1" cols="44" symbol></textarea>
 </div><div class="form-group">
-    <label for="hex">hex</label>
-    <textarea class="form-control" name="hex" rows="1" cols="44" hex></textarea>
-</div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="broadcast">Response</label>
-                            <figure class="highlight" for="function hex" disabled="">
-                                <pre>
-                                    <code id="code-passthru" class="language-html" data-lang="javascript"></code>
-                                </pre>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <input type="submit" value="passthru" class="btn btn-default">
-                    </form>
-            
-        </div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading-pax-start">
-        <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-pax-start" aria-expanded="false" aria-controls="collapse-pax-start">
-                pax start
-            </a>
-        </h4>
-    </div>
-    <div id="collapse-pax-start" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-pax-start">
-        <div class="panel-body">
-            
-            <form action="http://127.0.0.1:7778/api/pax/start" oninput="">
-                <div class="row">
-                    <div class="col-md-6">
-  
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="broadcast">Response</label>
-                            <figure class="highlight" for="" disabled="">
-                                <pre>
-                                    <code id="code-start" class="language-html" data-lang="javascript"></code>
-                                </pre>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <input type="submit" value="start" class="btn btn-default">
-                    </form>
-            
-        </div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading-tradebot-liquidity">
-        <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-tradebot-liquidity" aria-expanded="false" aria-controls="collapse-tradebot-liquidity">
-                tradebot liquidity
-            </a>
-        </h4>
-    </div>
-    <div id="collapse-tradebot-liquidity" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-tradebot-liquidity">
-        <div class="panel-body">
-            
-            <form action="http://127.0.0.1:7778/api/tradebot/liquidity" oninput="hash+vals+targetcoin">
-                <div class="row">
-                    <div class="col-md-6">
-  <div class="form-group">
-    <label for="hash">hash</label>
-    <textarea class="form-control" name="hash" rows="1" cols="65" hash></textarea>
+    <label for="address">address</label>
+    <textarea class="form-control" name="address" rows="1" cols="44" address></textarea>
 </div><div class="form-group">
-    <label for="vals">vals</label>
-    <textarea class="form-control" name="vals" rows="1" cols="0" vals></textarea>
+    <label for="count">count</label>
+    <textarea class="form-control" name="count" rows="1" cols="24" count></textarea>
 </div><div class="form-group">
-    <label for="targetcoin">targetcoin</label>
-    <textarea class="form-control" name="targetcoin" rows="1" cols="0" targetcoin></textarea>
+    <label for="skip">skip</label>
+    <textarea class="form-control" name="skip" rows="1" cols="24" skip></textarea>
 </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="broadcast">Response</label>
-                            <figure class="highlight" for="hash vals targetcoin" disabled="">
+                            <figure class="highlight" for="symbol address count skip" disabled="">
                                 <pre>
-                                    <code id="code-liquidity" class="language-html" data-lang="javascript"></code>
+                                    <code id="code-listtransactions2" class="language-html" data-lang="javascript"></code>
                                 </pre>
                             </figure>
                         </div>
                     </div>
                 </div>
-                <input type="submit" value="liquidity" class="btn btn-default">
+                <input type="submit" value="listtransactions2" class="btn btn-default">
                     </form>
             
         </div>
@@ -1060,255 +1238,82 @@
 </div>
 
 <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading-tradebot-amlp">
+    <div class="panel-heading" role="tab" id="heading-dex-gettxin">
         <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-tradebot-amlp" aria-expanded="false" aria-controls="collapse-tradebot-amlp">
-                tradebot amlp
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-dex-gettxin" aria-expanded="false" aria-controls="collapse-dex-gettxin">
+                dex gettxin
             </a>
         </h4>
     </div>
-    <div id="collapse-tradebot-amlp" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-tradebot-amlp">
+    <div id="collapse-dex-gettxin" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-dex-gettxin">
         <div class="panel-body">
             
-            <form action="http://127.0.0.1:7778/api/tradebot/amlp" oninput="">
-                <div class="row">
-                    <div class="col-md-6">
-  
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="broadcast">Response</label>
-                            <figure class="highlight" for="" disabled="">
-                                <pre>
-                                    <code id="code-amlp" class="language-html" data-lang="javascript"></code>
-                                </pre>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <input type="submit" value="amlp" class="btn btn-default">
-                    </form>
-            
-        </div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading-tradebot-notlp">
-        <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-tradebot-notlp" aria-expanded="false" aria-controls="collapse-tradebot-notlp">
-                tradebot notlp
-            </a>
-        </h4>
-    </div>
-    <div id="collapse-tradebot-notlp" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-tradebot-notlp">
-        <div class="panel-body">
-            
-            <form action="http://127.0.0.1:7778/api/tradebot/notlp" oninput="">
-                <div class="row">
-                    <div class="col-md-6">
-  
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="broadcast">Response</label>
-                            <figure class="highlight" for="" disabled="">
-                                <pre>
-                                    <code id="code-notlp" class="language-html" data-lang="javascript"></code>
-                                </pre>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <input type="submit" value="notlp" class="btn btn-default">
-                    </form>
-            
-        </div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading-tradebot-gensvm">
-        <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-tradebot-gensvm" aria-expanded="false" aria-controls="collapse-tradebot-gensvm">
-                tradebot gensvm
-            </a>
-        </h4>
-    </div>
-    <div id="collapse-tradebot-gensvm" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-tradebot-gensvm">
-        <div class="panel-body">
-            
-            <form action="http://127.0.0.1:7778/api/tradebot/gensvm" oninput="base+rel">
+            <form action="http://127.0.0.1:7778/api/dex/gettxin" oninput="txid+symbol+vout">
                 <div class="row">
                     <div class="col-md-6">
   <div class="form-group">
-    <label for="base">base</label>
-    <textarea class="form-control" name="base" rows="1" cols="44" base></textarea>
+    <label for="txid">txid</label>
+    <textarea class="form-control" name="txid" rows="1" cols="65" txid></textarea>
 </div><div class="form-group">
-    <label for="rel">rel</label>
-    <textarea class="form-control" name="rel" rows="1" cols="44" rel></textarea>
-</div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="broadcast">Response</label>
-                            <figure class="highlight" for="base rel" disabled="">
-                                <pre>
-                                    <code id="code-gensvm" class="language-html" data-lang="javascript"></code>
-                                </pre>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <input type="submit" value="gensvm" class="btn btn-default">
-                    </form>
-            
-        </div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading-tradebot-openliquidity">
-        <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-tradebot-openliquidity" aria-expanded="false" aria-controls="collapse-tradebot-openliquidity">
-                tradebot openliquidity
-            </a>
-        </h4>
-    </div>
-    <div id="collapse-tradebot-openliquidity" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-tradebot-openliquidity">
-        <div class="panel-body">
-            
-            <form action="http://127.0.0.1:7778/api/tradebot/openliquidity" oninput="">
-                <div class="row">
-                    <div class="col-md-6">
-  
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="broadcast">Response</label>
-                            <figure class="highlight" for="" disabled="">
-                                <pre>
-                                    <code id="code-openliquidity" class="language-html" data-lang="javascript"></code>
-                                </pre>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <input type="submit" value="openliquidity" class="btn btn-default">
-                    </form>
-            
-        </div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading-InstantDEX-allcoins">
-        <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-allcoins" aria-expanded="false" aria-controls="collapse-InstantDEX-allcoins">
-                InstantDEX allcoins
-            </a>
-        </h4>
-    </div>
-    <div id="collapse-InstantDEX-allcoins" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-allcoins">
-        <div class="panel-body">
-            
-            <form action="http://127.0.0.1:7778/api/InstantDEX/allcoins" oninput="">
-                <div class="row">
-                    <div class="col-md-6">
-  
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="broadcast">Response</label>
-                            <figure class="highlight" for="" disabled="">
-                                <pre>
-                                    <code id="code-allcoins" class="language-html" data-lang="javascript"></code>
-                                </pre>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <input type="submit" value="allcoins" class="btn btn-default">
-                    </form>
-            
-        </div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading-InstantDEX-available">
-        <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-available" aria-expanded="false" aria-controls="collapse-InstantDEX-available">
-                InstantDEX available
-            </a>
-        </h4>
-    </div>
-    <div id="collapse-InstantDEX-available" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-available">
-        <div class="panel-body">
-            
-            <form action="http://127.0.0.1:7778/api/InstantDEX/available" oninput="source">
-                <div class="row">
-                    <div class="col-md-6">
-  <div class="form-group">
-    <label for="source">source</label>
-    <textarea class="form-control" name="source" rows="1" cols="44" source></textarea>
-</div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="broadcast">Response</label>
-                            <figure class="highlight" for="source" disabled="">
-                                <pre>
-                                    <code id="code-available" class="language-html" data-lang="javascript"></code>
-                                </pre>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <input type="submit" value="available" class="btn btn-default">
-                    </form>
-            
-        </div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading-InstantDEX-request">
-        <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-request" aria-expanded="false" aria-controls="collapse-InstantDEX-request">
-                InstantDEX request
-            </a>
-        </h4>
-    </div>
-    <div id="collapse-InstantDEX-request" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-request">
-        <div class="panel-body">
-            
-            <form action="http://127.0.0.1:7778/api/InstantDEX/request" oninput="hash+vals+hexstr">
-                <div class="row">
-                    <div class="col-md-6">
-  <div class="form-group">
-    <label for="hash">hash</label>
-    <textarea class="form-control" name="hash" rows="1" cols="65" hash></textarea>
+    <label for="symbol">symbol</label>
+    <textarea class="form-control" name="symbol" rows="1" cols="0" symbol></textarea>
 </div><div class="form-group">
-    <label for="vals">vals</label>
-    <textarea class="form-control" name="vals" rows="1" cols="0" vals></textarea>
+    <label for="vout">vout</label>
+    <textarea class="form-control" name="vout" rows="1" cols="12" vout></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="txid symbol vout" disabled="">
+                                <pre>
+                                    <code id="code-gettxin" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="gettxin" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-dex-listspent">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-dex-listspent" aria-expanded="false" aria-controls="collapse-dex-listspent">
+                dex listspent
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-dex-listspent" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-dex-listspent">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/dex/listspent" oninput="symbol+address">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="symbol">symbol</label>
+    <textarea class="form-control" name="symbol" rows="1" cols="44" symbol></textarea>
 </div><div class="form-group">
-    <label for="hexstr">hexstr</label>
-    <textarea class="form-control" name="hexstr" rows="1" cols="0" hexstr></textarea>
+    <label for="address">address</label>
+    <textarea class="form-control" name="address" rows="1" cols="44" address></textarea>
 </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="broadcast">Response</label>
-                            <figure class="highlight" for="hash vals hexstr" disabled="">
+                            <figure class="highlight" for="symbol address" disabled="">
                                 <pre>
-                                    <code id="code-request" class="language-html" data-lang="javascript"></code>
+                                    <code id="code-listspent" class="language-html" data-lang="javascript"></code>
                                 </pre>
                             </figure>
                         </div>
                     </div>
                 </div>
-                <input type="submit" value="request" class="btn btn-default">
+                <input type="submit" value="listspent" class="btn btn-default">
                     </form>
             
         </div>
@@ -1316,113 +1321,150 @@
 </div>
 
 <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading-InstantDEX-incoming">
+    <div class="panel-heading" role="tab" id="heading-dex-getbalance">
         <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-incoming" aria-expanded="false" aria-controls="collapse-InstantDEX-incoming">
-                InstantDEX incoming
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-dex-getbalance" aria-expanded="false" aria-controls="collapse-dex-getbalance">
+                dex getbalance
             </a>
         </h4>
     </div>
-    <div id="collapse-InstantDEX-incoming" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-incoming">
+    <div id="collapse-dex-getbalance" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-dex-getbalance">
         <div class="panel-body">
             
-            <form action="http://127.0.0.1:7778/api/InstantDEX/incoming" oninput="requestid">
+            <form action="http://127.0.0.1:7778/api/dex/getbalance" oninput="symbol+address">
                 <div class="row">
                     <div class="col-md-6">
   <div class="form-group">
-    <label for="requestid">requestid</label>
-    <textarea class="form-control" name="requestid" rows="1" cols="12" requestid></textarea>
-</div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="broadcast">Response</label>
-                            <figure class="highlight" for="requestid" disabled="">
-                                <pre>
-                                    <code id="code-incoming" class="language-html" data-lang="javascript"></code>
-                                </pre>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <input type="submit" value="incoming" class="btn btn-default">
-                    </form>
-            
-        </div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading-InstantDEX-automatched">
-        <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-automatched" aria-expanded="false" aria-controls="collapse-InstantDEX-automatched">
-                InstantDEX automatched
-            </a>
-        </h4>
-    </div>
-    <div id="collapse-InstantDEX-automatched" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-automatched">
-        <div class="panel-body">
-            
-            <form action="http://127.0.0.1:7778/api/InstantDEX/automatched" oninput="requestid">
-                <div class="row">
-                    <div class="col-md-6">
-  <div class="form-group">
-    <label for="requestid">requestid</label>
-    <textarea class="form-control" name="requestid" rows="1" cols="12" requestid></textarea>
-</div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="broadcast">Response</label>
-                            <figure class="highlight" for="requestid" disabled="">
-                                <pre>
-                                    <code id="code-automatched" class="language-html" data-lang="javascript"></code>
-                                </pre>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <input type="submit" value="automatched" class="btn btn-default">
-                    </form>
-            
-        </div>
-    </div>
-</div>
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading-InstantDEX-accept">
-        <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-accept" aria-expanded="false" aria-controls="collapse-InstantDEX-accept">
-                InstantDEX accept
-            </a>
-        </h4>
-    </div>
-    <div id="collapse-InstantDEX-accept" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-accept">
-        <div class="panel-body">
-            
-            <form action="http://127.0.0.1:7778/api/InstantDEX/accept" oninput="requestid+quoteid">
-                <div class="row">
-                    <div class="col-md-6">
-  <div class="form-group">
-    <label for="requestid">requestid</label>
-    <textarea class="form-control" name="requestid" rows="1" cols="12" requestid></textarea>
+    <label for="symbol">symbol</label>
+    <textarea class="form-control" name="symbol" rows="1" cols="44" symbol></textarea>
 </div><div class="form-group">
-    <label for="quoteid">quoteid</label>
-    <textarea class="form-control" name="quoteid" rows="1" cols="12" quoteid></textarea>
+    <label for="address">address</label>
+    <textarea class="form-control" name="address" rows="1" cols="44" address></textarea>
 </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="broadcast">Response</label>
-                            <figure class="highlight" for="requestid quoteid" disabled="">
+                            <figure class="highlight" for="symbol address" disabled="">
                                 <pre>
-                                    <code id="code-accept" class="language-html" data-lang="javascript"></code>
+                                    <code id="code-getbalance" class="language-html" data-lang="javascript"></code>
                                 </pre>
                             </figure>
                         </div>
                     </div>
                 </div>
-                <input type="submit" value="accept" class="btn btn-default">
+                <input type="submit" value="getbalance" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-dex-explorer">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-dex-explorer" aria-expanded="false" aria-controls="collapse-dex-explorer">
+                dex explorer
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-dex-explorer" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-dex-explorer">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/dex/explorer" oninput="symbol">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="symbol">symbol</label>
+    <textarea class="form-control" name="symbol" rows="1" cols="44" symbol></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="symbol" disabled="">
+                                <pre>
+                                    <code id="code-explorer" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="explorer" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-dex-getmessage">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-dex-getmessage" aria-expanded="false" aria-controls="collapse-dex-getmessage">
+                dex getmessage
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-dex-getmessage" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-dex-getmessage">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/dex/getmessage" oninput="argstr">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="argstr">argstr</label>
+    <textarea class="form-control" name="argstr" rows="1" cols="44" argstr></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="argstr" disabled="">
+                                <pre>
+                                    <code id="code-getmessage" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="getmessage" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-dex-psock">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-dex-psock" aria-expanded="false" aria-controls="collapse-dex-psock">
+                dex psock
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-dex-psock" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-dex-psock">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/dex/psock" oninput="argstr">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="argstr">argstr</label>
+    <textarea class="form-control" name="argstr" rows="1" cols="44" argstr></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="argstr" disabled="">
+                                <pre>
+                                    <code id="code-psock" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="psock" class="btn btn-default">
                     </form>
             
         </div>
@@ -1526,15 +1568,18 @@
     <div id="collapse-basilisk-paxfiats" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-basilisk-paxfiats">
         <div class="panel-body">
             
-            <form action="http://127.0.0.1:7778/api/basilisk/paxfiats" oninput="">
+            <form action="http://127.0.0.1:7778/api/basilisk/paxfiats" oninput="mask">
                 <div class="row">
                     <div class="col-md-6">
-  
+  <div class="form-group">
+    <label for="mask">mask</label>
+    <textarea class="form-control" name="mask" rows="1" cols="12" mask></textarea>
+</div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="broadcast">Response</label>
-                            <figure class="highlight" for="" disabled="">
+                            <figure class="highlight" for="mask" disabled="">
                                 <pre>
                                     <code id="code-paxfiats" class="language-html" data-lang="javascript"></code>
                                 </pre>
@@ -1672,6 +1717,169 @@
                     </div>
                 </div>
                 <input type="submit" value="rawtx" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-basilisk-refresh">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-basilisk-refresh" aria-expanded="false" aria-controls="collapse-basilisk-refresh">
+                basilisk refresh
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-basilisk-refresh" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-basilisk-refresh">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/basilisk/refresh" oninput="symbol+address">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="symbol">symbol</label>
+    <textarea class="form-control" name="symbol" rows="1" cols="44" symbol></textarea>
+</div><div class="form-group">
+    <label for="address">address</label>
+    <textarea class="form-control" name="address" rows="1" cols="44" address></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="symbol address" disabled="">
+                                <pre>
+                                    <code id="code-refresh" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="refresh" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-basilisk-cancelrefresh">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-basilisk-cancelrefresh" aria-expanded="false" aria-controls="collapse-basilisk-cancelrefresh">
+                basilisk cancelrefresh
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-basilisk-cancelrefresh" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-basilisk-cancelrefresh">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/basilisk/cancelrefresh" oninput="">
+                <div class="row">
+                    <div class="col-md-6">
+  
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="" disabled="">
+                                <pre>
+                                    <code id="code-cancelrefresh" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="cancelrefresh" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-basilisk-utxorawtx">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-basilisk-utxorawtx" aria-expanded="false" aria-controls="collapse-basilisk-utxorawtx">
+                basilisk utxorawtx
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-basilisk-utxorawtx" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-basilisk-utxorawtx">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/basilisk/utxorawtx" oninput="symbol+utxos+vals+ignore">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="symbol">symbol</label>
+    <textarea class="form-control" name="symbol" rows="1" cols="44" symbol></textarea>
+</div><div class="form-group">
+    <label for="utxos">utxos</label>
+    <textarea class="form-control" name="utxos" rows="1" cols="0" utxos></textarea>
+</div><div class="form-group">
+    <label for="vals">vals</label>
+    <textarea class="form-control" name="vals" rows="1" cols="0" vals></textarea>
+</div><div class="form-group">
+    <label for="ignore">ignore</label>
+    <textarea class="form-control" name="ignore" rows="1" cols="44" ignore></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="symbol utxos vals ignore" disabled="">
+                                <pre>
+                                    <code id="code-utxorawtx" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="utxorawtx" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-basilisk-utxocombine">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-basilisk-utxocombine" aria-expanded="false" aria-controls="collapse-basilisk-utxocombine">
+                basilisk utxocombine
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-basilisk-utxocombine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-basilisk-utxocombine">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/basilisk/utxocombine" oninput="ignore+vals+symbol">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="ignore">ignore</label>
+    <textarea class="form-control" name="ignore" rows="1" cols="65" ignore></textarea>
+</div><div class="form-group">
+    <label for="vals">vals</label>
+    <textarea class="form-control" name="vals" rows="1" cols="0" vals></textarea>
+</div><div class="form-group">
+    <label for="symbol">symbol</label>
+    <textarea class="form-control" name="symbol" rows="1" cols="0" symbol></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="ignore vals symbol" disabled="">
+                                <pre>
+                                    <code id="code-utxocombine" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="utxocombine" class="btn btn-default">
                     </form>
             
         </div>
@@ -3158,6 +3366,49 @@
                     </div>
                 </div>
                 <input type="submit" value="importprivkey" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-bitcoinrpc-importaddress">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-bitcoinrpc-importaddress" aria-expanded="false" aria-controls="collapse-bitcoinrpc-importaddress">
+                bitcoinrpc importaddress
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-bitcoinrpc-importaddress" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-bitcoinrpc-importaddress">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/bitcoinrpc/importaddress" oninput="address+account+rescan">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="address">address</label>
+    <textarea class="form-control" name="address" rows="1" cols="44" address></textarea>
+</div><div class="form-group">
+    <label for="account">account</label>
+    <textarea class="form-control" name="account" rows="1" cols="44" account></textarea>
+</div><div class="form-group">
+    <label for="rescan">rescan</label>
+    <textarea class="form-control" name="rescan" rows="1" cols="12" rescan></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="address account rescan" disabled="">
+                                <pre>
+                                    <code id="code-importaddress" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="importaddress" class="btn btn-default">
                     </form>
             
         </div>
@@ -5727,6 +5978,336 @@
 </div>
 
 <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-jumblr-status">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-jumblr-status" aria-expanded="false" aria-controls="collapse-jumblr-status">
+                jumblr status
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-jumblr-status" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-jumblr-status">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/jumblr/status" oninput="">
+                <div class="row">
+                    <div class="col-md-6">
+  
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="" disabled="">
+                                <pre>
+                                    <code id="code-status" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="status" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-jumblr-runsilent">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-jumblr-runsilent" aria-expanded="false" aria-controls="collapse-jumblr-runsilent">
+                jumblr runsilent
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-jumblr-runsilent" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-jumblr-runsilent">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/jumblr/runsilent" oninput="">
+                <div class="row">
+                    <div class="col-md-6">
+  
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="" disabled="">
+                                <pre>
+                                    <code id="code-runsilent" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="runsilent" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-jumblr-totransparent">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-jumblr-totransparent" aria-expanded="false" aria-controls="collapse-jumblr-totransparent">
+                jumblr totransparent
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-jumblr-totransparent" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-jumblr-totransparent">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/jumblr/totransparent" oninput="">
+                <div class="row">
+                    <div class="col-md-6">
+  
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="" disabled="">
+                                <pre>
+                                    <code id="code-totransparent" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="totransparent" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-InstantDEX-allcoins">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-allcoins" aria-expanded="false" aria-controls="collapse-InstantDEX-allcoins">
+                InstantDEX allcoins
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-InstantDEX-allcoins" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-allcoins">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/InstantDEX/allcoins" oninput="">
+                <div class="row">
+                    <div class="col-md-6">
+  
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="" disabled="">
+                                <pre>
+                                    <code id="code-allcoins" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="allcoins" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-InstantDEX-available">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-available" aria-expanded="false" aria-controls="collapse-InstantDEX-available">
+                InstantDEX available
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-InstantDEX-available" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-available">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/InstantDEX/available" oninput="source">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="source">source</label>
+    <textarea class="form-control" name="source" rows="1" cols="44" source></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="source" disabled="">
+                                <pre>
+                                    <code id="code-available" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="available" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-InstantDEX-request">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-request" aria-expanded="false" aria-controls="collapse-InstantDEX-request">
+                InstantDEX request
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-InstantDEX-request" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-request">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/InstantDEX/request" oninput="hash+vals+hexstr">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="hash">hash</label>
+    <textarea class="form-control" name="hash" rows="1" cols="65" hash></textarea>
+</div><div class="form-group">
+    <label for="vals">vals</label>
+    <textarea class="form-control" name="vals" rows="1" cols="0" vals></textarea>
+</div><div class="form-group">
+    <label for="hexstr">hexstr</label>
+    <textarea class="form-control" name="hexstr" rows="1" cols="0" hexstr></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="hash vals hexstr" disabled="">
+                                <pre>
+                                    <code id="code-request" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="request" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-InstantDEX-incoming">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-incoming" aria-expanded="false" aria-controls="collapse-InstantDEX-incoming">
+                InstantDEX incoming
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-InstantDEX-incoming" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-incoming">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/InstantDEX/incoming" oninput="requestid">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="requestid">requestid</label>
+    <textarea class="form-control" name="requestid" rows="1" cols="12" requestid></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="requestid" disabled="">
+                                <pre>
+                                    <code id="code-incoming" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="incoming" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-InstantDEX-automatched">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-automatched" aria-expanded="false" aria-controls="collapse-InstantDEX-automatched">
+                InstantDEX automatched
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-InstantDEX-automatched" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-automatched">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/InstantDEX/automatched" oninput="requestid">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="requestid">requestid</label>
+    <textarea class="form-control" name="requestid" rows="1" cols="12" requestid></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="requestid" disabled="">
+                                <pre>
+                                    <code id="code-automatched" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="automatched" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-InstantDEX-accept">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-accept" aria-expanded="false" aria-controls="collapse-InstantDEX-accept">
+                InstantDEX accept
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-InstantDEX-accept" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-accept">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/InstantDEX/accept" oninput="requestid+quoteid">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="requestid">requestid</label>
+    <textarea class="form-control" name="requestid" rows="1" cols="12" requestid></textarea>
+</div><div class="form-group">
+    <label for="quoteid">quoteid</label>
+    <textarea class="form-control" name="quoteid" rows="1" cols="12" quoteid></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="requestid quoteid" disabled="">
+                                <pre>
+                                    <code id="code-accept" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="accept" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
     <div class="panel-heading" role="tab" id="heading-InstantDEX-buy">
         <h4 class="panel-title">
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-buy" aria-expanded="false" aria-controls="collapse-InstantDEX-buy">
@@ -6363,6 +6944,379 @@
 </div>
 
 <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-InstantDEX-init">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-init" aria-expanded="false" aria-controls="collapse-InstantDEX-init">
+                InstantDEX init
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-InstantDEX-init" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-init">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/InstantDEX/init" oninput="">
+                <div class="row">
+                    <div class="col-md-6">
+  
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="" disabled="">
+                                <pre>
+                                    <code id="code-init" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="init" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-InstantDEX-getswaplist">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-getswaplist" aria-expanded="false" aria-controls="collapse-InstantDEX-getswaplist">
+                InstantDEX getswaplist
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-InstantDEX-getswaplist" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-getswaplist">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/InstantDEX/getswaplist" oninput="">
+                <div class="row">
+                    <div class="col-md-6">
+  
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="" disabled="">
+                                <pre>
+                                    <code id="code-getswaplist" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="getswaplist" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-InstantDEX-smartaddresses">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-smartaddresses" aria-expanded="false" aria-controls="collapse-InstantDEX-smartaddresses">
+                InstantDEX smartaddresses
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-InstantDEX-smartaddresses" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-smartaddresses">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/InstantDEX/smartaddresses" oninput="">
+                <div class="row">
+                    <div class="col-md-6">
+  
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="" disabled="">
+                                <pre>
+                                    <code id="code-smartaddresses" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="smartaddresses" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-InstantDEX-smartaddress">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-smartaddress" aria-expanded="false" aria-controls="collapse-InstantDEX-smartaddress">
+                InstantDEX smartaddress
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-InstantDEX-smartaddress" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-smartaddress">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/InstantDEX/smartaddress" oninput="type+symbol+maxbid+minask">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="type">type</label>
+    <textarea class="form-control" name="type" rows="1" cols="44" type></textarea>
+</div><div class="form-group">
+    <label for="symbol">symbol</label>
+    <textarea class="form-control" name="symbol" rows="1" cols="44" symbol></textarea>
+</div><div class="form-group">
+    <label for="maxbid">maxbid</label>
+    <textarea class="form-control" name="maxbid" rows="1" cols="24" maxbid></textarea>
+</div><div class="form-group">
+    <label for="minask">minask</label>
+    <textarea class="form-control" name="minask" rows="1" cols="24" minask></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="type symbol maxbid minask" disabled="">
+                                <pre>
+                                    <code id="code-smartaddress" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="smartaddress" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-InstantDEX-DEXratio">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-InstantDEX-DEXratio" aria-expanded="false" aria-controls="collapse-InstantDEX-DEXratio">
+                InstantDEX DEXratio
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-InstantDEX-DEXratio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-InstantDEX-DEXratio">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/InstantDEX/DEXratio" oninput="ratio">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="ratio">ratio</label>
+    <textarea class="form-control" name="ratio" rows="1" cols="24" ratio></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="ratio" disabled="">
+                                <pre>
+                                    <code id="code-DEXratio" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="DEXratio" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-tradebot-liquidity">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-tradebot-liquidity" aria-expanded="false" aria-controls="collapse-tradebot-liquidity">
+                tradebot liquidity
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-tradebot-liquidity" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-tradebot-liquidity">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/tradebot/liquidity" oninput="hash+vals+targetcoin">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="hash">hash</label>
+    <textarea class="form-control" name="hash" rows="1" cols="65" hash></textarea>
+</div><div class="form-group">
+    <label for="vals">vals</label>
+    <textarea class="form-control" name="vals" rows="1" cols="0" vals></textarea>
+</div><div class="form-group">
+    <label for="targetcoin">targetcoin</label>
+    <textarea class="form-control" name="targetcoin" rows="1" cols="0" targetcoin></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="hash vals targetcoin" disabled="">
+                                <pre>
+                                    <code id="code-liquidity" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="liquidity" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-tradebot-amlp">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-tradebot-amlp" aria-expanded="false" aria-controls="collapse-tradebot-amlp">
+                tradebot amlp
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-tradebot-amlp" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-tradebot-amlp">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/tradebot/amlp" oninput="blocktrail">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="blocktrail">blocktrail</label>
+    <textarea class="form-control" name="blocktrail" rows="1" cols="44" blocktrail></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="blocktrail" disabled="">
+                                <pre>
+                                    <code id="code-amlp" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="amlp" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-tradebot-notlp">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-tradebot-notlp" aria-expanded="false" aria-controls="collapse-tradebot-notlp">
+                tradebot notlp
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-tradebot-notlp" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-tradebot-notlp">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/tradebot/notlp" oninput="">
+                <div class="row">
+                    <div class="col-md-6">
+  
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="" disabled="">
+                                <pre>
+                                    <code id="code-notlp" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="notlp" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-tradebot-gensvm">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-tradebot-gensvm" aria-expanded="false" aria-controls="collapse-tradebot-gensvm">
+                tradebot gensvm
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-tradebot-gensvm" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-tradebot-gensvm">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/tradebot/gensvm" oninput="base+rel">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="base">base</label>
+    <textarea class="form-control" name="base" rows="1" cols="44" base></textarea>
+</div><div class="form-group">
+    <label for="rel">rel</label>
+    <textarea class="form-control" name="rel" rows="1" cols="44" rel></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="base rel" disabled="">
+                                <pre>
+                                    <code id="code-gensvm" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="gensvm" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-tradebot-openliquidity">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-tradebot-openliquidity" aria-expanded="false" aria-controls="collapse-tradebot-openliquidity">
+                tradebot openliquidity
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-tradebot-openliquidity" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-tradebot-openliquidity">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/tradebot/openliquidity" oninput="">
+                <div class="row">
+                    <div class="col-md-6">
+  
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="" disabled="">
+                                <pre>
+                                    <code id="code-openliquidity" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="openliquidity" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
     <div class="panel-heading" role="tab" id="heading-tradebot-aveprice">
         <h4 class="panel-title">
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-tradebot-aveprice" aria-expanded="false" aria-controls="collapse-tradebot-aveprice">
@@ -6832,6 +7786,151 @@
                     </div>
                 </div>
                 <input type="submit" value="resume" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-tradebot-allbalances">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-tradebot-allbalances" aria-expanded="false" aria-controls="collapse-tradebot-allbalances">
+                tradebot allbalances
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-tradebot-allbalances" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-tradebot-allbalances">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/tradebot/allbalances" oninput="">
+                <div class="row">
+                    <div class="col-md-6">
+  
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="" disabled="">
+                                <pre>
+                                    <code id="code-allbalances" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="allbalances" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-tradebot-anchor">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-tradebot-anchor" aria-expanded="false" aria-controls="collapse-tradebot-anchor">
+                tradebot anchor
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-tradebot-anchor" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-tradebot-anchor">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/tradebot/anchor" oninput="">
+                <div class="row">
+                    <div class="col-md-6">
+  
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="" disabled="">
+                                <pre>
+                                    <code id="code-anchor" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="anchor" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-tradebot-portfolio">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-tradebot-portfolio" aria-expanded="false" aria-controls="collapse-tradebot-portfolio">
+                tradebot portfolio
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-tradebot-portfolio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-tradebot-portfolio">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/tradebot/portfolio" oninput="">
+                <div class="row">
+                    <div class="col-md-6">
+  
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="" disabled="">
+                                <pre>
+                                    <code id="code-portfolio" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="portfolio" class="btn btn-default">
+                    </form>
+            
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-tradebot-goals">
+        <h4 class="panel-title">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-tradebot-goals" aria-expanded="false" aria-controls="collapse-tradebot-goals">
+                tradebot goals
+            </a>
+        </h4>
+    </div>
+    <div id="collapse-tradebot-goals" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-tradebot-goals">
+        <div class="panel-body">
+            
+            <form action="http://127.0.0.1:7778/api/tradebot/goals" oninput="currencies+vals+targettime">
+                <div class="row">
+                    <div class="col-md-6">
+  <div class="form-group">
+    <label for="currencies">currencies</label>
+    <textarea class="form-control" name="currencies" rows="1" cols="0" currencies></textarea>
+</div><div class="form-group">
+    <label for="vals">vals</label>
+    <textarea class="form-control" name="vals" rows="1" cols="0" vals></textarea>
+</div><div class="form-group">
+    <label for="targettime">targettime</label>
+    <textarea class="form-control" name="targettime" rows="1" cols="12" targettime></textarea>
+</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="broadcast">Response</label>
+                            <figure class="highlight" for="currencies vals targettime" disabled="">
+                                <pre>
+                                    <code id="code-goals" class="language-html" data-lang="javascript"></code>
+                                </pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="goals" class="btn btn-default">
                     </form>
             
         </div>
@@ -7653,18 +8752,21 @@
     <div id="collapse-SuperNET-priv2wif" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-SuperNET-priv2wif">
         <div class="panel-body">
             
-            <form action="http://127.0.0.1:7778/api/SuperNET/priv2wif" oninput="priv">
+            <form action="http://127.0.0.1:7778/api/SuperNET/priv2wif" oninput="priv+wiftype">
                 <div class="row">
                     <div class="col-md-6">
   <div class="form-group">
     <label for="priv">priv</label>
     <textarea class="form-control" name="priv" rows="1" cols="44" priv></textarea>
+</div><div class="form-group">
+    <label for="wiftype">wiftype</label>
+    <textarea class="form-control" name="wiftype" rows="1" cols="12" wiftype></textarea>
 </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="broadcast">Response</label>
-                            <figure class="highlight" for="priv" disabled="">
+                            <figure class="highlight" for="priv wiftype" disabled="">
                                 <pre>
                                     <code id="code-priv2wif" class="language-html" data-lang="javascript"></code>
                                 </pre>

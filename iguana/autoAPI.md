@@ -7,7 +7,7 @@ need to create help/dpow.md file
 
 ## method: pending
 
-put helpful info here
+dpow pending displays the pending pax withdraws
 
 
 > Shell command format:
@@ -24,11 +24,11 @@ http://127.0.0.1:7778/api/dpow/pending?fiat={string}
 
 field | value type | Description
 --------- | ------- | -----------
-fiat | string | no help info
+fiat | string | USD, JPY, EUR
 
 ## method: notarychains
 
-put helpful info here
+Displays the notarychains
 
 
 > Shell command format:
@@ -48,7 +48,7 @@ field | value type | Description
 
 ## method: active
 
-put helpful info here
+That method has been depreciated!
 
 
 > Shell command format:
@@ -69,7 +69,7 @@ maskhex | string | no help info
 
 ## method: ratify
 
-put helpful info here
+That method has been depreciated!
 
 
 > Shell command format:
@@ -92,7 +92,7 @@ ratified | array | no help info
 
 ## method: cancelratify
 
-put helpful info here
+That method has been depreciated!
 
 
 > Shell command format:
@@ -112,7 +112,7 @@ field | value type | Description
 
 ## method: bindaddr
 
-put helpful info here
+That method has been depreciated!
 
 
 > Shell command format:
@@ -133,7 +133,7 @@ ipaddr | string | no help info
 
 ## method: fundnotaries
 
-put helpful info here
+Fundnotaries api call is used to fund notaries
 
 
 > Shell command format:
@@ -150,8 +150,32 @@ http://127.0.0.1:7778/api/dpow/fundnotaries?symbol={string}&numblocks={int}
 
 field | value type | Description
 --------- | ------- | -----------
-symbol | string | no help info
-numblocks | int | no help info
+symbol | string | Notarychain
+numblocks | int | Number of blocks to scan for a notary's notarizations
+
+pax API
+===
+need to create help/pax.md file
+
+## method: start
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pax\",\"method\":\"start\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/pax/start
+```
+
+field | value type | Description
+--------- | ------- | -----------
 
 passthru API
 ===
@@ -165,21 +189,122 @@ put helpful info here
 > Shell command format:
 
 ```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"passthru\",\"method\":\"paxfiats\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"passthru\",\"method\":\"paxfiats\",\"mask\":\"{int}\"}"
 ```
 
 > HTTP API call format:
 
 ```url
-http://127.0.0.1:7778/api/passthru/paxfiats
+http://127.0.0.1:7778/api/passthru/paxfiats?mask={int}
 ```
 
 field | value type | Description
 --------- | ------- | -----------
+mask | int | no help info
+
+zcash API
+===
+need to create help/zcash.md file
+
+## method: passthru
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"zcash\",\"method\":\"passthru\",\"function\":\"{string}\",\"hex\":\"{string}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/zcash/passthru?function={string}&hex={string}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+function | string | no help info
+hex | string | no help info
+
+komodo API
+===
+need to create help/komodo.md file
+
+## method: passthru
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"komodo\",\"method\":\"passthru\",\"function\":\"{string}\",\"hex\":\"{string}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/komodo/passthru?function={string}&hex={string}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+function | string | no help info
+hex | string | no help info
 
 dex API
 ===
 need to create help/dex.md file
+
+## method: kvsearch
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"dex\",\"method\":\"kvsearch\",\"symbol\":\"{string}\",\"key\":\"{string}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/dex/kvsearch?symbol={string}&key={string}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+symbol | string | no help info
+key | string | no help info
+
+## method: kvupdate
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"dex\",\"method\":\"kvupdate\",\"symbol\":\"{string}\",\"key\":\"{string}\",\"value\":\"{string}\",\"flags\":\"{int}\",\"unused\":\"{int}\",\"unusedb\":\"{int}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/dex/kvupdate?symbol={string}&key={string}&value={string}&flags={int}&unused={int}&unusedb={int}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+symbol | string | no help info
+key | string | no help info
+value | string | no help info
+flags | int | no help info
+unused | int | no help info
+unusedb | int | no help info
 
 ## method: send
 
@@ -442,6 +567,28 @@ field | value type | Description
 symbol | string | no help info
 address | string | no help info
 
+## method: checkaddress
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"dex\",\"method\":\"checkaddress\",\"symbol\":\"{string}\",\"address\":\"{string}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/dex/checkaddress?symbol={string}&address={string}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+symbol | string | no help info
+address | string | no help info
+
 ## method: listunspent
 
 put helpful info here
@@ -488,11 +635,7 @@ address | string | no help info
 count | float | no help info
 skip | float | no help info
 
-zcash API
-===
-need to create help/zcash.md file
-
-## method: passthru
+## method: listunspent2
 
 put helpful info here
 
@@ -500,25 +643,21 @@ put helpful info here
 > Shell command format:
 
 ```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"zcash\",\"method\":\"passthru\",\"function\":\"{string}\",\"hex\":\"{string}\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"dex\",\"method\":\"listunspent2\",\"symbol\":\"{string}\",\"address\":\"{string}\"}"
 ```
 
 > HTTP API call format:
 
 ```url
-http://127.0.0.1:7778/api/zcash/passthru?function={string}&hex={string}
+http://127.0.0.1:7778/api/dex/listunspent2?symbol={string}&address={string}
 ```
 
 field | value type | Description
 --------- | ------- | -----------
-function | string | no help info
-hex | string | no help info
+symbol | string | no help info
+address | string | no help info
 
-komodo API
-===
-need to create help/komodo.md file
-
-## method: passthru
+## method: listtransactions2
 
 put helpful info here
 
@@ -526,25 +665,23 @@ put helpful info here
 > Shell command format:
 
 ```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"komodo\",\"method\":\"passthru\",\"function\":\"{string}\",\"hex\":\"{string}\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"dex\",\"method\":\"listtransactions2\",\"symbol\":\"{string}\",\"address\":\"{string}\",\"count\":\"{float}\",\"skip\":\"{float}\"}"
 ```
 
 > HTTP API call format:
 
 ```url
-http://127.0.0.1:7778/api/komodo/passthru?function={string}&hex={string}
+http://127.0.0.1:7778/api/dex/listtransactions2?symbol={string}&address={string}&count={float}&skip={float}
 ```
 
 field | value type | Description
 --------- | ------- | -----------
-function | string | no help info
-hex | string | no help info
+symbol | string | no help info
+address | string | no help info
+count | float | no help info
+skip | float | no help info
 
-pax API
-===
-need to create help/pax.md file
-
-## method: start
+## method: gettxin
 
 put helpful info here
 
@@ -552,23 +689,22 @@ put helpful info here
 > Shell command format:
 
 ```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"pax\",\"method\":\"start\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"dex\",\"method\":\"gettxin\",\"txid\":\"{hash}\",\"symbol\":\"{str}\",\"vout\":\"{int}\"}"
 ```
 
 > HTTP API call format:
 
 ```url
-http://127.0.0.1:7778/api/pax/start
+http://127.0.0.1:7778/api/dex/gettxin?txid={hash}&symbol={str}&vout={int}
 ```
 
 field | value type | Description
 --------- | ------- | -----------
+txid | hash | no help info
+symbol | str | no help info
+vout | int | no help info
 
-tradebot API
-===
-need to create help/tradebot.md file
-
-## method: liquidity
+## method: listspent
 
 put helpful info here
 
@@ -576,22 +712,21 @@ put helpful info here
 > Shell command format:
 
 ```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"liquidity\",\"hash\":\"{hash}\",\"vals\":\"{array}\",\"targetcoin\":\"{str}\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"dex\",\"method\":\"listspent\",\"symbol\":\"{string}\",\"address\":\"{string}\"}"
 ```
 
 > HTTP API call format:
 
 ```url
-http://127.0.0.1:7778/api/tradebot/liquidity?hash={hash}&vals={array}&targetcoin={str}
+http://127.0.0.1:7778/api/dex/listspent?symbol={string}&address={string}
 ```
 
 field | value type | Description
 --------- | ------- | -----------
-hash | hash | no help info
-vals | array | no help info
-targetcoin | str | no help info
+symbol | string | no help info
+address | string | no help info
 
-## method: amlp
+## method: getbalance
 
 put helpful info here
 
@@ -599,19 +734,21 @@ put helpful info here
 > Shell command format:
 
 ```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"amlp\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"dex\",\"method\":\"getbalance\",\"symbol\":\"{string}\",\"address\":\"{string}\"}"
 ```
 
 > HTTP API call format:
 
 ```url
-http://127.0.0.1:7778/api/tradebot/amlp
+http://127.0.0.1:7778/api/dex/getbalance?symbol={string}&address={string}
 ```
 
 field | value type | Description
 --------- | ------- | -----------
+symbol | string | no help info
+address | string | no help info
 
-## method: notlp
+## method: explorer
 
 put helpful info here
 
@@ -619,19 +756,20 @@ put helpful info here
 > Shell command format:
 
 ```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"notlp\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"dex\",\"method\":\"explorer\",\"symbol\":\"{string}\"}"
 ```
 
 > HTTP API call format:
 
 ```url
-http://127.0.0.1:7778/api/tradebot/notlp
+http://127.0.0.1:7778/api/dex/explorer?symbol={string}
 ```
 
 field | value type | Description
 --------- | ------- | -----------
+symbol | string | no help info
 
-## method: gensvm
+## method: getmessage
 
 put helpful info here
 
@@ -639,21 +777,20 @@ put helpful info here
 > Shell command format:
 
 ```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"gensvm\",\"base\":\"{string}\",\"rel\":\"{string}\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"dex\",\"method\":\"getmessage\",\"argstr\":\"{string}\"}"
 ```
 
 > HTTP API call format:
 
 ```url
-http://127.0.0.1:7778/api/tradebot/gensvm?base={string}&rel={string}
+http://127.0.0.1:7778/api/dex/getmessage?argstr={string}
 ```
 
 field | value type | Description
 --------- | ------- | -----------
-base | string | no help info
-rel | string | no help info
+argstr | string | no help info
 
-## method: openliquidity
+## method: psock
 
 put helpful info here
 
@@ -661,149 +798,18 @@ put helpful info here
 > Shell command format:
 
 ```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"openliquidity\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"dex\",\"method\":\"psock\",\"argstr\":\"{string}\"}"
 ```
 
 > HTTP API call format:
 
 ```url
-http://127.0.0.1:7778/api/tradebot/openliquidity
+http://127.0.0.1:7778/api/dex/psock?argstr={string}
 ```
 
 field | value type | Description
 --------- | ------- | -----------
-
-InstantDEX API
-===
-need to create help/InstantDEX.md file
-
-## method: allcoins
-
-put helpful info here
-
-
-> Shell command format:
-
-```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"allcoins\"}"
-```
-
-> HTTP API call format:
-
-```url
-http://127.0.0.1:7778/api/InstantDEX/allcoins
-```
-
-field | value type | Description
---------- | ------- | -----------
-
-## method: available
-
-put helpful info here
-
-
-> Shell command format:
-
-```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"available\",\"source\":\"{string}\"}"
-```
-
-> HTTP API call format:
-
-```url
-http://127.0.0.1:7778/api/InstantDEX/available?source={string}
-```
-
-field | value type | Description
---------- | ------- | -----------
-source | string | no help info
-
-## method: request
-
-put helpful info here
-
-
-> Shell command format:
-
-```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"request\",\"hash\":\"{hash}\",\"vals\":\"{array}\",\"hexstr\":\"{str}\"}"
-```
-
-> HTTP API call format:
-
-```url
-http://127.0.0.1:7778/api/InstantDEX/request?hash={hash}&vals={array}&hexstr={str}
-```
-
-field | value type | Description
---------- | ------- | -----------
-hash | hash | no help info
-vals | array | no help info
-hexstr | str | no help info
-
-## method: incoming
-
-put helpful info here
-
-
-> Shell command format:
-
-```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"incoming\",\"requestid\":\"{int}\"}"
-```
-
-> HTTP API call format:
-
-```url
-http://127.0.0.1:7778/api/InstantDEX/incoming?requestid={int}
-```
-
-field | value type | Description
---------- | ------- | -----------
-requestid | int | no help info
-
-## method: automatched
-
-put helpful info here
-
-
-> Shell command format:
-
-```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"automatched\",\"requestid\":\"{int}\"}"
-```
-
-> HTTP API call format:
-
-```url
-http://127.0.0.1:7778/api/InstantDEX/automatched?requestid={int}
-```
-
-field | value type | Description
---------- | ------- | -----------
-requestid | int | no help info
-
-## method: accept
-
-put helpful info here
-
-
-> Shell command format:
-
-```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"accept\",\"requestid\":\"{int}\",\"quoteid\":\"{int}\"}"
-```
-
-> HTTP API call format:
-
-```url
-http://127.0.0.1:7778/api/InstantDEX/accept?requestid={int}&quoteid={int}
-```
-
-field | value type | Description
---------- | ------- | -----------
-requestid | int | no help info
-quoteid | int | no help info
+argstr | string | no help info
 
 basilisk API
 ===
@@ -863,17 +869,18 @@ put helpful info here
 > Shell command format:
 
 ```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"basilisk\",\"method\":\"paxfiats\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"basilisk\",\"method\":\"paxfiats\",\"mask\":\"{int}\"}"
 ```
 
 > HTTP API call format:
 
 ```url
-http://127.0.0.1:7778/api/basilisk/paxfiats
+http://127.0.0.1:7778/api/basilisk/paxfiats?mask={int}
 ```
 
 field | value type | Description
 --------- | ------- | -----------
+mask | int | no help info
 
 ## method: balances
 
@@ -943,6 +950,95 @@ field | value type | Description
 hash | hash | no help info
 vals | array | no help info
 hexstr | str | no help info
+
+## method: refresh
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"basilisk\",\"method\":\"refresh\",\"symbol\":\"{string}\",\"address\":\"{string}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/basilisk/refresh?symbol={string}&address={string}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+symbol | string | no help info
+address | string | no help info
+
+## method: cancelrefresh
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"basilisk\",\"method\":\"cancelrefresh\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/basilisk/cancelrefresh
+```
+
+field | value type | Description
+--------- | ------- | -----------
+
+## method: utxorawtx
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"basilisk\",\"method\":\"utxorawtx\",\"symbol\":\"{string}\",\"utxos\":\"{array}\",\"vals\":\"{object}\",\"ignore\":\"{string}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/basilisk/utxorawtx?symbol={string}&utxos={array}&vals={object}&ignore={string}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+symbol | string | no help info
+utxos | array | no help info
+vals | object | no help info
+ignore | string | no help info
+
+## method: utxocombine
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"basilisk\",\"method\":\"utxocombine\",\"ignore\":\"{hash}\",\"vals\":\"{array}\",\"symbol\":\"{str}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/basilisk/utxocombine?ignore={hash}&vals={array}&symbol={str}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+ignore | hash | no help info
+vals | array | no help info
+symbol | str | no help info
 
 ## method: getmessage
 
@@ -1900,6 +1996,29 @@ field | value type | Description
 wif | string | The private key to import into the wallet encoded in base58check using wallet import format (WIF).
 account | string | The name of an account to which transactions involving the key should be assigned. The default is the default account, an empty string (“”).
 rescan | int | Set to 1 (the default) to rescan the entire local block database for transactions affecting any address or pubkey script in the wallet (including transaction affecting the newly-added address for this private key). Set to 0 to not rescan the block database (rescanning can be performed at any time by restarting Bitcoin Core with the -rescan command-line argument). Rescanning may take several minutes. Notes: if the address for this key is already in the wallet, the block database will not be rescanned even if this parameter is set.
+
+## method: importaddress
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"bitcoinrpc\",\"method\":\"importaddress\",\"address\":\"{string}\",\"account\":\"{string}\",\"rescan\":\"{int}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/bitcoinrpc/importaddress?address={string}&account={string}&rescan={int}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+address | string | no help info
+account | string | no help info
+rescan | int | no help info
 
 ## method: dumpprivkey
 
@@ -3505,9 +3624,201 @@ field | value type | Description
 --------- | ------- | -----------
 activecoin | string | no help info
 
+jumblr API
+===
+need to create help/jumblr.md file
+
+## method: status
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"jumblr\",\"method\":\"status\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/jumblr/status
+```
+
+field | value type | Description
+--------- | ------- | -----------
+
+## method: runsilent
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"jumblr\",\"method\":\"runsilent\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/jumblr/runsilent
+```
+
+field | value type | Description
+--------- | ------- | -----------
+
+## method: totransparent
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"jumblr\",\"method\":\"totransparent\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/jumblr/totransparent
+```
+
+field | value type | Description
+--------- | ------- | -----------
+
 InstantDEX API
 ===
 need to create help/InstantDEX.md file
+
+## method: allcoins
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"allcoins\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/InstantDEX/allcoins
+```
+
+field | value type | Description
+--------- | ------- | -----------
+
+## method: available
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"available\",\"source\":\"{string}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/InstantDEX/available?source={string}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+source | string | no help info
+
+## method: request
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"request\",\"hash\":\"{hash}\",\"vals\":\"{array}\",\"hexstr\":\"{str}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/InstantDEX/request?hash={hash}&vals={array}&hexstr={str}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+hash | hash | no help info
+vals | array | no help info
+hexstr | str | no help info
+
+## method: incoming
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"incoming\",\"requestid\":\"{int}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/InstantDEX/incoming?requestid={int}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+requestid | int | no help info
+
+## method: automatched
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"automatched\",\"requestid\":\"{int}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/InstantDEX/automatched?requestid={int}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+requestid | int | no help info
+
+## method: accept
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"accept\",\"requestid\":\"{int}\",\"quoteid\":\"{int}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/InstantDEX/accept?requestid={int}&quoteid={int}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+requestid | int | no help info
+quoteid | int | no help info
 
 ## method: buy
 
@@ -3851,9 +4162,220 @@ exchange | string | no help info
 base | string | no help info
 rel | string | no help info
 
+## method: init
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"init\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/InstantDEX/init
+```
+
+field | value type | Description
+--------- | ------- | -----------
+
+## method: getswaplist
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"getswaplist\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/InstantDEX/getswaplist
+```
+
+field | value type | Description
+--------- | ------- | -----------
+
+## method: smartaddresses
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"smartaddresses\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/InstantDEX/smartaddresses
+```
+
+field | value type | Description
+--------- | ------- | -----------
+
+## method: smartaddress
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"smartaddress\",\"type\":\"{string}\",\"symbol\":\"{string}\",\"maxbid\":\"{float}\",\"minask\":\"{float}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/InstantDEX/smartaddress?type={string}&symbol={string}&maxbid={float}&minask={float}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+type | string | no help info
+symbol | string | no help info
+maxbid | float | no help info
+minask | float | no help info
+
+## method: DEXratio
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"InstantDEX\",\"method\":\"DEXratio\",\"ratio\":\"{float}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/InstantDEX/DEXratio?ratio={float}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+ratio | float | no help info
+
 tradebot API
 ===
 need to create help/tradebot.md file
+
+## method: liquidity
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"liquidity\",\"hash\":\"{hash}\",\"vals\":\"{array}\",\"targetcoin\":\"{str}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/tradebot/liquidity?hash={hash}&vals={array}&targetcoin={str}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+hash | hash | no help info
+vals | array | no help info
+targetcoin | str | no help info
+
+## method: amlp
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"amlp\",\"blocktrail\":\"{string}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/tradebot/amlp?blocktrail={string}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+blocktrail | string | no help info
+
+## method: notlp
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"notlp\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/tradebot/notlp
+```
+
+field | value type | Description
+--------- | ------- | -----------
+
+## method: gensvm
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"gensvm\",\"base\":\"{string}\",\"rel\":\"{string}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/tradebot/gensvm?base={string}&rel={string}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+base | string | no help info
+rel | string | no help info
+
+## method: openliquidity
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"openliquidity\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/tradebot/openliquidity
+```
+
+field | value type | Description
+--------- | ------- | -----------
 
 ## method: aveprice
 
@@ -4108,6 +4630,89 @@ field | value type | Description
 --------- | ------- | -----------
 exchange | string | no help info
 botid | string | no help info
+
+## method: allbalances
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"allbalances\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/tradebot/allbalances
+```
+
+field | value type | Description
+--------- | ------- | -----------
+
+## method: anchor
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"anchor\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/tradebot/anchor
+```
+
+field | value type | Description
+--------- | ------- | -----------
+
+## method: portfolio
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"portfolio\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/tradebot/portfolio
+```
+
+field | value type | Description
+--------- | ------- | -----------
+
+## method: goals
+
+put helpful info here
+
+
+> Shell command format:
+
+```shell
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"tradebot\",\"method\":\"goals\",\"currencies\":\"{array}\",\"vals\":\"{object}\",\"targettime\":\"{int}\"}"
+```
+
+> HTTP API call format:
+
+```url
+http://127.0.0.1:7778/api/tradebot/goals?currencies={array}&vals={object}&targettime={int}
+```
+
+field | value type | Description
+--------- | ------- | -----------
+currencies | array | no help info
+vals | object | no help info
+targettime | int | no help info
 
 SuperNET API
 ===
@@ -4571,18 +5176,19 @@ put helpful info here
 > Shell command format:
 
 ```shell
-curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"priv2wif\",\"priv\":\"{string}\"}"
+curl --url "http://127.0.0.1:7778" --data "{\"agent\":\"SuperNET\",\"method\":\"priv2wif\",\"priv\":\"{string}\",\"wiftype\":\"{int}\"}"
 ```
 
 > HTTP API call format:
 
 ```url
-http://127.0.0.1:7778/api/SuperNET/priv2wif?priv={string}
+http://127.0.0.1:7778/api/SuperNET/priv2wif?priv={string}&wiftype={int}
 ```
 
 field | value type | Description
 --------- | ------- | -----------
 priv | string | no help info
+wiftype | int | no help info
 
 ## method: addr2rmd160
 
